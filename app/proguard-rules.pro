@@ -1,2 +1,3 @@
 # Add project specific ProGuard rules here.
-# Yo
+# You can control the set of applied configuration files using the
+# progu
