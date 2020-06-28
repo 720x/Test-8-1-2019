@@ -18,4 +18,6 @@ import com.harshit.imagesearch.R
 import com.harshit.imagesearch.adapter.cartAdapter
 import java.util.ArrayList
 
-class CartActivity
+class CartActivity : AppCompatActivity(), ICartLoadListener {
+
+    lateinit var rvcart: Recyc
