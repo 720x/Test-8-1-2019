@@ -23,4 +23,6 @@ class CartActivity : AppCompatActivity(), ICartLoadListener {
     lateinit var rvcart: RecyclerView
     lateinit var cartLoadListener: ICartLoadListener
 
-    override fun onCre
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView
