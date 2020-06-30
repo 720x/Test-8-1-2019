@@ -20,4 +20,7 @@ import java.util.ArrayList
 
 class CartActivity : AppCompatActivity(), ICartLoadListener {
 
-    lateinit var rvcart: Recyc
+    lateinit var rvcart: RecyclerView
+    lateinit var cartLoadListener: ICartLoadListener
+
+    override fun onCre
