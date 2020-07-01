@@ -30,4 +30,9 @@ class CartActivity : AppCompatActivity(), ICartLoadListener {
         rvcart = findViewById(R.id.rvCart)
 
         init()
-        loa
+        loadCartFromFirebase()
+
+    }
+
+    private fun init() {
+        ButterKnife.bind(this
