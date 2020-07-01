@@ -25,4 +25,9 @@ class CartActivity : AppCompatActivity(), ICartLoadListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView
+        setContentView(R.layout.activity_cart)
+
+        rvcart = findViewById(R.id.rvCart)
+
+        init()
+        loa
