@@ -37,4 +37,6 @@ class CartActivity : AppCompatActivity(), ICartLoadListener {
     private fun init() {
         ButterKnife.bind(this)
         cartLoadListener  = this
-        val layoutManager = LinearLayoutManager(thi
+        val layoutManager = LinearLayoutManager(this)
+        rvcart.layoutManager = layoutManager
+        rvcart.addItemDecoration(DividerI
