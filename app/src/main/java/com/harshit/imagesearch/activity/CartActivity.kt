@@ -43,3 +43,6 @@ class CartActivity : AppCompatActivity(), ICartLoadListener {
     }
 
     private fun loadCartFromFirebase(){
+        val cartItems: MutableList<CartModel> = ArrayList<CartModel>()
+
+        v
