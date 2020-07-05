@@ -39,4 +39,7 @@ class CartActivity : AppCompatActivity(), ICartLoadListener {
         cartLoadListener  = this
         val layoutManager = LinearLayoutManager(this)
         rvcart.layoutManager = layoutManager
-        rvcart.addItemDecoration(DividerI
+        rvcart.addItemDecoration(DividerItemDecoration(this, layoutManager.orientation))
+    }
+
+    private fun loadCartFromFirebase(){
