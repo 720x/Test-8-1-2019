@@ -46,4 +46,5 @@ class CartActivity : AppCompatActivity(), ICartLoadListener {
         val cartItems: MutableList<CartModel> = ArrayList<CartModel>()
 
         val instance = FirebaseDatabase.getInstance()
-        val cart = instance.ge
+        val cart = instance.getReference("cart")
+            .child(FirebaseAuth.getInstance().currentUser!!.uid)
