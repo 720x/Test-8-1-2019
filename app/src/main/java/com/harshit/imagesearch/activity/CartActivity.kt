@@ -48,3 +48,6 @@ class CartActivity : AppCompatActivity(), ICartLoadListener {
         val instance = FirebaseDatabase.getInstance()
         val cart = instance.getReference("cart")
             .child(FirebaseAuth.getInstance().currentUser!!.uid)
+
+        val listener: ValueEventListener = object : ValueEventListener {
+     
