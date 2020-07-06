@@ -50,4 +50,5 @@ class CartActivity : AppCompatActivity(), ICartLoadListener {
             .child(FirebaseAuth.getInstance().currentUser!!.uid)
 
         val listener: ValueEventListener = object : ValueEventListener {
-     
+            override fun onDataChange(collection: DataSnapshot) {
+                if (collection.exists()) 
