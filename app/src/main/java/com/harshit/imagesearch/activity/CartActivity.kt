@@ -51,4 +51,6 @@ class CartActivity : AppCompatActivity(), ICartLoadListener {
 
         val listener: ValueEventListener = object : ValueEventListener {
             override fun onDataChange(collection: DataSnapshot) {
-                if (collection.exists()) 
+                if (collection.exists()) {
+                    for (CartItem in collection.children) {
+                        v
