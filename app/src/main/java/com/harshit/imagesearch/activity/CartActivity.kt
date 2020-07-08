@@ -53,4 +53,5 @@ class CartActivity : AppCompatActivity(), ICartLoadListener {
             override fun onDataChange(collection: DataSnapshot) {
                 if (collection.exists()) {
                     for (CartItem in collection.children) {
-                        v
+                        val key = CartItem.key
+                        val imgUrl = CartItem.child("imgUrl"
