@@ -58,4 +58,6 @@ class CartActivity : AppCompatActivity(), ICartLoadListener {
                             String::class.java
                         )
                         val cartItem = CartModel(key,imgUrl)
-                 
+                        cartItems.add(cartItem)
+                    }
+                    cartLoadListene
