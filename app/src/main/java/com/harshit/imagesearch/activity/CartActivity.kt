@@ -54,4 +54,6 @@ class CartActivity : AppCompatActivity(), ICartLoadListener {
                 if (collection.exists()) {
                     for (CartItem in collection.children) {
                         val key = CartItem.key
-                        val imgUrl = CartItem.child("imgUrl"
+                        val imgUrl = CartItem.child("imgUrl").getValue(
+                            String::class.java
+                
