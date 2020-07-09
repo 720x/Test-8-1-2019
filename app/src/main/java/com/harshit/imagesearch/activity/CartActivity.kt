@@ -56,4 +56,6 @@ class CartActivity : AppCompatActivity(), ICartLoadListener {
                         val key = CartItem.key
                         val imgUrl = CartItem.child("imgUrl").getValue(
                             String::class.java
-                
+                        )
+                        val cartItem = CartModel(key,imgUrl)
+                 
