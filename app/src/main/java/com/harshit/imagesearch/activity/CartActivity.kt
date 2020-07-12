@@ -60,4 +60,6 @@ class CartActivity : AppCompatActivity(), ICartLoadListener {
                         val cartItem = CartModel(key,imgUrl)
                         cartItems.add(cartItem)
                     }
-                    cartLoadListene
+                    cartLoadListener.onCartLoadSuccess(cartItems)
+                } else {
+                
