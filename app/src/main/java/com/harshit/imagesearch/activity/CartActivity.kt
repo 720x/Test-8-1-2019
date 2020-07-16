@@ -63,4 +63,6 @@ class CartActivity : AppCompatActivity(), ICartLoadListener {
                     cartLoadListener.onCartLoadSuccess(cartItems)
                 } else {
                     // TODO: Just directly show error toast
-                    cartLoadListener.onCart
+                    cartLoadListener.onCartLoadFailed("Error: Firebase cart list not found.")
+                }
+            }
