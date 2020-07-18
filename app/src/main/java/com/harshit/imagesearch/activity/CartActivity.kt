@@ -68,4 +68,5 @@ class CartActivity : AppCompatActivity(), ICartLoadListener {
             }
 
             override fun onCancelled(error: DatabaseError) {
-                // TODO
+                // TODO: Just directly show error toast
+                cartLoadListener.onCartLoadFailed(e
