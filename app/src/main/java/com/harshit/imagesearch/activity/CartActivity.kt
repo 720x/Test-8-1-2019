@@ -66,3 +66,6 @@ class CartActivity : AppCompatActivity(), ICartLoadListener {
                     cartLoadListener.onCartLoadFailed("Error: Firebase cart list not found.")
                 }
             }
+
+            override fun onCancelled(error: DatabaseError) {
+                // TODO
