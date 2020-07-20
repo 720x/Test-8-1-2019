@@ -73,4 +73,8 @@ class CartActivity : AppCompatActivity(), ICartLoadListener {
             }
         }
 
-        cart.addListenerForSingleValueEv
+        cart.addListenerForSingleValueEvent(listener)
+    }
+
+
+    override fun onCartLoadSuccess(cartModelList: List<CartModel?>?)
