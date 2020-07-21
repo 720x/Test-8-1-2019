@@ -77,4 +77,6 @@ class CartActivity : AppCompatActivity(), ICartLoadListener {
     }
 
 
-    override fun onCartLoadSuccess(cartModelList: List<CartModel?>?)
+    override fun onCartLoadSuccess(cartModelList: List<CartModel?>?) {
+        val cartAdapter = cartAdapter(this, cartModelList as List<CartModel>)
+        rvcart.adapt
