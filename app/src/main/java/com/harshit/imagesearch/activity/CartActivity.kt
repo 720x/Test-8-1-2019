@@ -82,4 +82,8 @@ class CartActivity : AppCompatActivity(), ICartLoadListener {
         rvcart.adapter = cartAdapter
     }
 
-    override fun onCartLoadFailed(message: String?) 
+    override fun onCartLoadFailed(message: String?) {
+        Toast.makeText(this, "error", Toast.LENGTH_SHORT).show()
+    }
+
+}
