@@ -19,3 +19,80 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.harshit.imagesearch.R
 import com.harshit.imagesearch.fragment.FAQsFragment
+
+class DashboardActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
+
+
+    private lateinit var drawer: DrawerLayout
+    private lateinit var navigationView: NavigationView
+    private lateinit var mAuth: FirebaseAuth
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_dashboard)
+
+        val toolbar = findViewById<Toolbar>(R.id.toolbar)
+        setSupportActionBar(toolbar)
+        drawer = findViewById(R.id.drawer_layout)
+        navigationView = findViewById(R.id.navigationView)
+        navigationView.setNavigationItemSelectedListener(this)
+
+        mAuth = FirebaseAuth.getInstance()
+
+        val toggle = ActionBarDrawerToggle(
+            this, drawer, toolbar,
+            R.string.navigation_drawer_open, R.string.navigation_drawer_close
+        )
+        drawer.addDrawerListener(toggle)
+        toggle.syncState()
+
+        if (savedInstanceState == null) {
+            openHome()
+        }
+
+    }
+    override fun onNavigationItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.nav_home -> openHome()
+            R.id.nav_faqs -> {
+                supportFragmentManager.beginTransaction().replace(
+                    R.id.fragment_container,
+                    FAQsFragment()
+                ).commit()
+                supportActionBar!!.setTitle("FAQs")
+            }
+            R.id.nav_logout -> AlertDialog.Builder(this@DashboardActivity)
+                .setTitle("Logout!")
+                .setMessage("Are you sure you want to Logout?")
+                .setCancelable(true)
+                .setNegativeButton(
+                    "No"
+                ) { dialogInterface, i -> dialogInterface.dismiss() }
+                .setPositiveButton(
+                    "Yes"
+                ) { _, _ ->
+                    FirebaseAuth.getInstance().signOut()
+                    startActivity(Intent(this@DashboardActivity, LoginActivity::class.java))
+                    finish()
+                }.show()
+        }
+        drawer.closeDrawer(GravityCompat.START)
+        return true
+    }
+
+    private fun openHome() {
+        val navigationView = findViewById<NavigationView>(R.id.navigationView)
+        navigationView.setNavigationItemSelectedListener(this)
+        navigationView.setCheckedItem(R.id.nav_home)
+        supportFragmentManager.beginTransaction().replace(
+            R.id.fragment_container,
+            HomeFragment()
+        ).commit()
+        supportActionBar!!.setTitle("Home")
+    }
+
+    override fun onBackPressed() {
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
+            drawer.closeDrawer(GravityCompat.START)
+        } else {
+            val fragment = this.supportFragmentManager.findFragmentById(R.id.fragment_container)
