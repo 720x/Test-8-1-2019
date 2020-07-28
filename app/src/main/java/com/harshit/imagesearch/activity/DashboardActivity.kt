@@ -96,3 +96,39 @@ class DashboardActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
             drawer.closeDrawer(GravityCompat.START)
         } else {
             val fragment = this.supportFragmentManager.findFragmentById(R.id.fragment_container)
+            if (fragment is HomeFragment) {
+                finish()
+            } else {
+                openHome()
+            }
+        }
+    }
+
+    override fun onResume() {
+        isOnline()
+        val user = mAuth.currentUser
+        if (user == null) {
+            startActivity(Intent(this@DashboardActivity, LoginActivity::class.java))
+        }
+        super.onResume()
+    }
+
+    fun isOnline(): Boolean {
+        val conMgr =
+            applicationContext.getSystemService(CONNECTIVITY_SERVICE) as ConnectivityManager
+        val netInfo = conMgr.activeNetworkInfo
+        if (netInfo == null || !netInfo.isConnected || !netInfo.isAvailable) {
+            AlertDialog.Builder(this@DashboardActivity)
+                .setTitle("No Internet Connection!")
+                .setMessage("Please Connect to Internet..")
+                .setCancelable(true)
+                .setPositiveButton(
+                    "Ok"
+                ) { dialog, which -> this@DashboardActivity.startActivity(Intent(Settings.ACTION_WIRELESS_SETTINGS)) }
+                .show()
+            return false
+        }
+        return true
+    }
+
+}
