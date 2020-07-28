@@ -1,3 +1,5 @@
 package com.harshit.imagesearch.activity
 
-im
+import android.content.Context
+import android.content.DialogInterface
+import andro
