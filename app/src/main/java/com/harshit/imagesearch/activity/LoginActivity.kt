@@ -18,4 +18,8 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
-import com.g
+import com.google.firebase.auth.FirebaseUser
+import com.harshit.imagesearch.R
+
+
+c
