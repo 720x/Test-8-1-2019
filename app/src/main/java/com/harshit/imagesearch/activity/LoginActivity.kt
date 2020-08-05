@@ -22,4 +22,6 @@ import com.google.firebase.auth.FirebaseUser
 import com.harshit.imagesearch.R
 
 
-c
+class LoginActivity : AppCompatActivity() {
+    var btnLogin: Button? = null
+    var etLo
