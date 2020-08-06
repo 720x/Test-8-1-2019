@@ -24,4 +24,6 @@ import com.harshit.imagesearch.R
 
 class LoginActivity : AppCompatActivity() {
     var btnLogin: Button? = null
-    var etLo
+    var etLoginEmail: EditText? = null
+    var etLoginPassword: EditText? = null
+    var txtSign
