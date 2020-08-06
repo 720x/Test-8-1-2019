@@ -26,4 +26,9 @@ class LoginActivity : AppCompatActivity() {
     var btnLogin: Button? = null
     var etLoginEmail: EditText? = null
     var etLoginPassword: EditText? = null
-    var txtSign
+    var txtSignUp: TextView? = null
+
+
+    var mAuth: FirebaseAuth? = null
+
+    override fun onCre
