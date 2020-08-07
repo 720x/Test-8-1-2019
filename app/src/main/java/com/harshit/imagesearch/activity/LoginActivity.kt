@@ -35,4 +35,5 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
         btnLogin = findViewById<Button>(R.id.btnLogin)
-  
+        etLoginEmail = findViewById<EditText>(R.id.etLoginEmail)
+        etLoginPassword = findView
