@@ -36,4 +36,5 @@ class LoginActivity : AppCompatActivity() {
         setContentView(R.layout.activity_login)
         btnLogin = findViewById<Button>(R.id.btnLogin)
         etLoginEmail = findViewById<EditText>(R.id.etLoginEmail)
-        etLoginPassword = findView
+        etLoginPassword = findViewById<EditText>(R.id.etLoginPassword)
+        txtSignUp = findViewById<TextView>(R.id.txtSi
