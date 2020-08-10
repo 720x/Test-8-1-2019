@@ -37,4 +37,6 @@ class LoginActivity : AppCompatActivity() {
         btnLogin = findViewById<Button>(R.id.btnLogin)
         etLoginEmail = findViewById<EditText>(R.id.etLoginEmail)
         etLoginPassword = findViewById<EditText>(R.id.etLoginPassword)
-        txtSignUp = findViewById<TextView>(R.id.txtSi
+        txtSignUp = findViewById<TextView>(R.id.txtSignUp)
+        mAuth = FirebaseAuth.getInstance()
+        btnLogin!!.setOnClickListener {
