@@ -42,4 +42,6 @@ class LoginActivity : AppCompatActivity() {
         btnLogin!!.setOnClickListener { loginUser() }
         txtSignUp!!.setOnClickListener { view: View? ->
             startActivity(
-     
+                Intent(
+                    this@LoginActivity,
+                    Register
