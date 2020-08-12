@@ -49,3 +49,8 @@ class LoginActivity : AppCompatActivity() {
 
             )
             finish()
+        }
+    }
+
+    private fun loginUser() {
+        val loginEmail = etLoginE
