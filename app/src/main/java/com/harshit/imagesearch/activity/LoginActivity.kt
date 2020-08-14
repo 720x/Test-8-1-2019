@@ -57,4 +57,5 @@ class LoginActivity : AppCompatActivity() {
         val loginPassword = etLoginPassword!!.text.toString()
         when {
             TextUtils.isEmpty(loginEmail) -> {
-                etL
+                etLoginEmail!!.error = "Email cannot be empty.."
+                etLoginEmail!!.requ
