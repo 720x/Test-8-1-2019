@@ -53,4 +53,5 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun loginUser() {
-        val loginEmail = etLoginE
+        val loginEmail = etLoginEmail!!.text.toString()
+        val loginPassword = etLoginPassword!!.text.toString()
