@@ -65,4 +65,4 @@ class LoginActivity : AppCompatActivity() {
                 etLoginPassword!!.requestFocus()
             }
             else -> {
-                mAuth?.signIn
+                mAuth?.signInWithEmailAndPassword(loginEmail, loginPassword)?.addOnCompleteListener(
