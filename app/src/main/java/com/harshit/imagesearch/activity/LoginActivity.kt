@@ -58,4 +58,7 @@ class LoginActivity : AppCompatActivity() {
         when {
             TextUtils.isEmpty(loginEmail) -> {
                 etLoginEmail!!.error = "Email cannot be empty.."
-                etLoginEmail!!.requ
+                etLoginEmail!!.requestFocus()
+            }
+            TextUtils.isEmpty(loginPassword) -> {
+           
