@@ -62,4 +62,7 @@ class LoginActivity : AppCompatActivity() {
             }
             TextUtils.isEmpty(loginPassword) -> {
                 etLoginPassword!!.error = "Password cannot be empty.."
-                etLoginPas
+                etLoginPassword!!.requestFocus()
+            }
+            else -> {
+                mAuth?.signIn
