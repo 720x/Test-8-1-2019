@@ -66,3 +66,5 @@ class LoginActivity : AppCompatActivity() {
             }
             else -> {
                 mAuth?.signInWithEmailAndPassword(loginEmail, loginPassword)?.addOnCompleteListener(
+                    OnCompleteListener<AuthResult?> { task ->
+         
