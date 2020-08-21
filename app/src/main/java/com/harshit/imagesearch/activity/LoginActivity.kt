@@ -69,4 +69,4 @@ class LoginActivity : AppCompatActivity() {
                     OnCompleteListener<AuthResult?> { task ->
                         if (task.isSuccessful) {
                             Toast.makeText(this@LoginActivity, "Welcome!", Toast.LENGTH_SHORT).show()
-             
+                            startActivity(Intent(this@LoginActivity, DashboardActivity::class
