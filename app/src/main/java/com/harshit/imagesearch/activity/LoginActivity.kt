@@ -68,4 +68,5 @@ class LoginActivity : AppCompatActivity() {
                 mAuth?.signInWithEmailAndPassword(loginEmail, loginPassword)?.addOnCompleteListener(
                     OnCompleteListener<AuthResult?> { task ->
                         if (task.isSuccessful) {
-                            Toast.makeText(this
+                            Toast.makeText(this@LoginActivity, "Welcome!", Toast.LENGTH_SHORT).show()
+             
