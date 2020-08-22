@@ -73,4 +73,5 @@ class LoginActivity : AppCompatActivity() {
                             finish()
                         } else {
                             Toast.makeText(
-                                this@LoginA
+                                this@LoginActivity,
+                                "Login error: Your user ID or Password is incorr
