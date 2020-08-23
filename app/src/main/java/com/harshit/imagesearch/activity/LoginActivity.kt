@@ -76,4 +76,7 @@ class LoginActivity : AppCompatActivity() {
                                 this@LoginActivity,
                                 "Login error: Your user ID or Password is incorrect ",
                                 Toast.LENGTH_SHORT
-                  
+                            ).show()
+                        }
+                    })
+            }
