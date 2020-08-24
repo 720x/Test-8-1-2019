@@ -90,4 +90,9 @@ class LoginActivity : AppCompatActivity() {
         if (user != null) {
             startActivity(Intent(this@LoginActivity, DashboardActivity::class.java))
             finish()
-     
+        }
+    }
+
+    fun isOnline(): Boolean {
+        val conMgr =
+       
