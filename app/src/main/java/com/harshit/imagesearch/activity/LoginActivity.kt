@@ -88,4 +88,6 @@ class LoginActivity : AppCompatActivity() {
         super.onStart()
         val user: FirebaseUser? = mAuth?.currentUser
         if (user != null) {
-            startActivity(Intent(
+            startActivity(Intent(this@LoginActivity, DashboardActivity::class.java))
+            finish()
+     
