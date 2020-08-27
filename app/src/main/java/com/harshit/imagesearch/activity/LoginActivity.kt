@@ -95,4 +95,6 @@ class LoginActivity : AppCompatActivity() {
 
     fun isOnline(): Boolean {
         val conMgr =
-            getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE) as Connectivit
+            getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+        val netInfo = conMgr.activeNetworkInfo
+        if ((netInfo == null) || !
