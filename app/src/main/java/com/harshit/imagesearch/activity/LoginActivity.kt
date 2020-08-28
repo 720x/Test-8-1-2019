@@ -100,4 +100,6 @@ class LoginActivity : AppCompatActivity() {
         if ((netInfo == null) || !netInfo.isConnected || !netInfo.isAvailable) {
             AlertDialog.Builder(this@LoginActivity)
                 .setTitle("No Internet Connection!")
-                .setMessage("Please Connect to
+                .setMessage("Please Connect to Internet..")
+                .setCancelable(true)
+                .setPositiveBut
