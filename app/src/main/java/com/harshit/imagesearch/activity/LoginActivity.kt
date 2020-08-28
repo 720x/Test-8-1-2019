@@ -98,4 +98,6 @@ class LoginActivity : AppCompatActivity() {
             getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
         val netInfo = conMgr.activeNetworkInfo
         if ((netInfo == null) || !netInfo.isConnected || !netInfo.isAvailable) {
-            AlertDialog.Builder(this@LoginA
+            AlertDialog.Builder(this@LoginActivity)
+                .setTitle("No Internet Connection!")
+                .setMessage("Please Connect to
