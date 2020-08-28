@@ -97,4 +97,5 @@ class LoginActivity : AppCompatActivity() {
         val conMgr =
             getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
         val netInfo = conMgr.activeNetworkInfo
-        if ((netInfo == null) || !
+        if ((netInfo == null) || !netInfo.isConnected || !netInfo.isAvailable) {
+            AlertDialog.Builder(this@LoginA
