@@ -104,4 +104,5 @@ class LoginActivity : AppCompatActivity() {
                 .setCancelable(true)
                 .setPositiveButton("Ok",
                     DialogInterface.OnClickListener { dialog, which ->
- 
+                        this@LoginActivity.startActivity(
+                 
