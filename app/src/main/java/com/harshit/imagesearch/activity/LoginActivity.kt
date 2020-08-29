@@ -102,4 +102,6 @@ class LoginActivity : AppCompatActivity() {
                 .setTitle("No Internet Connection!")
                 .setMessage("Please Connect to Internet..")
                 .setCancelable(true)
-                .setPositiveBut
+                .setPositiveButton("Ok",
+                    DialogInterface.OnClickListener { dialog, which ->
+ 
