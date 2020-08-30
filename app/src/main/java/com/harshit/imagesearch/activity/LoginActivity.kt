@@ -107,4 +107,7 @@ class LoginActivity : AppCompatActivity() {
                         this@LoginActivity.startActivity(
                             Intent(
                                 Settings.ACTION_WIRELESS_SETTINGS
-     
+                            )
+                        )
+                    }).show()
+      
