@@ -105,4 +105,6 @@ class LoginActivity : AppCompatActivity() {
                 .setPositiveButton("Ok",
                     DialogInterface.OnClickListener { dialog, which ->
                         this@LoginActivity.startActivity(
-                 
+                            Intent(
+                                Settings.ACTION_WIRELESS_SETTINGS
+     
