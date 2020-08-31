@@ -115,4 +115,9 @@ class LoginActivity : AppCompatActivity() {
         return true
     }
 
-    override fun onResum
+    override fun onResume() {
+        isOnline()
+        super.onResume()
+    }
+
+    override fun onBackPressed() {
