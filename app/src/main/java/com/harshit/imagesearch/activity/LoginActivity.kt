@@ -125,4 +125,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
     override fun onPause() {
-        super.onPaus
+        super.onPause()
+        etLoginEmail!!.setText("")
+        etLoginPassword!!.setText("")
+  
