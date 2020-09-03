@@ -128,4 +128,5 @@ class LoginActivity : AppCompatActivity() {
         super.onPause()
         etLoginEmail!!.setText("")
         etLoginPassword!!.setText("")
-  
+    }
+}
