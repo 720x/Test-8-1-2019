@@ -74,3 +74,92 @@ class MainActivity : AppCompatActivity() {
         btnGallery = findViewById(R.id.btnUserGallery)
         btnCamera = findViewById(R.id.btnUserCamera)
         txtDisplay = findViewById(R.id.txtDisplay)
+
+
+        imgImage.visibility = View.GONE
+        cameraLauncher = registerForActivityResult(
+            ActivityResultContracts.StartActivityForResult()
+        ) { result ->
+            val data = result?.data
+            try {
+                val photo = data?.extras?.get("data") as Bitmap
+                val myCameraIntent = Intent(this@MainActivity, ProductDisplayActivity::class.java)
+                myCameraIntent.putExtra("CameraImage", photo)
+                startActivity(myCameraIntent)
+                imgImage.setImageBitmap(photo)
+                inputImage = InputImage.fromBitmap(photo, 0)
+                imgImage.visibility = View.VISIBLE
+                txtDisplay.visibility = View.INVISIBLE
+                imgDisplay.visibility = View.INVISIBLE
+                setViewAndDetect(photo)
+            } catch (e: Exception) {
+                Log.d(TAG, "onActivityResult: ${e.message}")
+            }
+        }
+
+        galleryLauncher = registerForActivityResult(
+            ActivityResultContracts.StartActivityForResult()
+        ) { result ->
+            val data = result?.data
+            try {
+                val myGalleryIntent = Intent(this@MainActivity, ProductDisplayActivity::class.java)
+                myGalleryIntent.putExtra("GalleryImage", data?.data)
+                startActivity(myGalleryIntent)
+                inputImage = InputImage.fromFilePath(this@MainActivity, data?.data)
+                imgImage.setImageURI(data?.data)
+                imgImage.visibility = View.VISIBLE
+                imgDisplay.visibility = View.INVISIBLE
+                txtDisplay.visibility = View.INVISIBLE
+                setViewAndDetect(inputImage.bitmapInternal)
+
+            } catch (e: Exception) {
+
+            }
+        }
+
+
+        btnGallery.setOnClickListener {
+            val storageIntent = Intent()
+            storageIntent.type = "image/*"
+            storageIntent.action = Intent.ACTION_GET_CONTENT
+            galleryLauncher.launch(storageIntent)
+        }
+
+        btnCamera.setOnClickListener {
+            val cameraIntent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
+            cameraLauncher.launch(cameraIntent)
+        }
+
+
+
+
+    }
+
+
+
+
+    private fun setViewAndDetect(bitmap: Bitmap?) {
+        bitmap?.let {
+            viewBinding.imgImage.drawDetectionResults(emptyList())
+            viewBinding.imgImage.setImageBitmap(bitmap)
+            runObjectDetection(bitmap)
+        }
+    }
+
+    private fun runObjectDetection(bitmap: Bitmap) {
+        //Create ML Kit's InputImage object
+        val image = InputImage.fromBitmap(bitmap, 0)
+
+        //Acquire detector object
+        val options = ObjectDetectorOptions.Builder()
+            .setDetectorMode(ObjectDetectorOptions.SINGLE_IMAGE_MODE)
+            .enableMultipleObjects()
+            .enableClassification()
+            .build()
+        val objectDetector = ObjectDetection.getClient(options)
+
+        //Feed given image to detector and setup callback
+        objectDetector.process(image)
+            .addOnSuccessListener { results ->
+                //Keep only the FASHION_GOOD objects
+                val filteredResults = results.filter { result ->
