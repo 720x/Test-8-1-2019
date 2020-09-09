@@ -163,3 +163,89 @@ class MainActivity : AppCompatActivity() {
             .addOnSuccessListener { results ->
                 //Keep only the FASHION_GOOD objects
                 val filteredResults = results.filter { result ->
+                    result.labels.indexOfFirst { it.text == PredefinedCategory.FASHION_GOOD } != -1
+                }
+
+                //Visualize the detection result
+                runOnUiThread {
+                    viewBinding.imgImage.drawDetectionResults(filteredResults)
+
+                }
+
+            }
+            .addOnFailureListener {
+
+                Log.e(TAG, it.message.toString())
+            }
+
+    }
+
+    private fun startProductImageSearch(objectImage: Bitmap) {
+        try {
+            // Create file based Bitmap. We use PNG to preserve the image quality
+            val savedFile = createImageFile(ProductSearchActivity.CROPPED_IMAGE_FILE_NAME)
+            objectImage.compress(Bitmap.CompressFormat.JPEG, 100, FileOutputStream(savedFile))
+
+
+
+            // Start the product search activity (using Vision Product Search API.).
+            startActivity(
+                Intent(
+                    this,
+                    ProductSearchActivity::class.java
+                ).apply {
+                    // As the size limit of a bundle is 1MB, we need to save the bitmap to a file
+                    // and reload it in the other activity to support large query images.
+                    putExtra(
+                        ProductSearchActivity.REQUEST_TARGET_IMAGE_PATH,
+                        savedFile.absolutePath
+                    )
+                })
+        } catch (e: Exception) {
+            // IO Exception, Out Of memory ....
+            Toast.makeText(this, e.message, Toast.LENGTH_SHORT).show()
+            Log.e(TAG, "Error starting the product image search activity.", e)
+        }
+    }
+
+    private fun convertBitmapToBase64(bitmap: Bitmap): String {
+        val byteArrayOutputStream = ByteArrayOutputStream()
+        bitmap.compress(Bitmap.CompressFormat.PNG, 100, byteArrayOutputStream)
+        val byteArray: ByteArray = byteArrayOutputStream.toByteArray()
+        return Base64.encodeToString(byteArray, Base64.DEFAULT)
+    }
+
+
+
+    @Throws(IOException::class)
+    private fun createImageFile(fileName: String): File {
+        // Create an image file name
+        val storageDir: File? = getExternalFilesDir(Environment.DIRECTORY_PICTURES)
+        return File.createTempFile(
+            fileName, /* prefix */
+            ".jpg", /* suffix */
+            storageDir /* directory */
+        )
+    }
+
+
+
+    private fun checkPermission(permission:String, requestCode: Int){
+        if(ContextCompat.checkSelfPermission(
+                this@MainActivity, Manifest.permission.CAMERA)==PackageManager.PERMISSION_DENIED){
+
+            showMessageOKCancel(
+                "You need to allow camera usage"
+            ) { _, _ ->
+                ActivityCompat.requestPermissions(this@MainActivity, arrayOf(permission), requestCode)
+            }
+        }
+    }
+
+    private fun showMessageOKCancel(message: String, okListener: DialogInterface.OnClickListener) {
+        AlertDialog.Builder(this)
+            .setMessage(message)
+            .setPositiveButton("OK", okListener)
+            .setNegativeButton("Cancel", null)
+            .create()
+            .show()
