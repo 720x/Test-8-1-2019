@@ -7,4 +7,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
-import android.widget.
+import android.widget.ProgressBar
+import android.widget.TextView
+import android.widget.Toast
