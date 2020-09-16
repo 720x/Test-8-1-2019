@@ -18,4 +18,5 @@ import com.bumptech.glide.Glide
 import com.google.firebase.database.*
 import com.harshit.imagesearch.listeners.IProductLoadListener
 import com.harshit.imagesearch.R
-im
+import com.harshit.imagesearch.adapter.productAdapter
+import com.harshit.imagesearch.mo
