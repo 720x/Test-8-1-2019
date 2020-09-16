@@ -22,4 +22,7 @@ import com.harshit.imagesearch.adapter.productAdapter
 import com.harshit.imagesearch.models.ProductModel
 import java.util.ArrayList
 
-class ProductDisplayActivity : AppComp
+class ProductDisplayActivity : AppCompatActivity(), IProductLoadListener {
+
+    lateinit var rvProductMain: RecyclerView
+    l
