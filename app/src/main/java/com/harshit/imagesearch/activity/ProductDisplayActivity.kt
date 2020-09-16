@@ -19,4 +19,7 @@ import com.google.firebase.database.*
 import com.harshit.imagesearch.listeners.IProductLoadListener
 import com.harshit.imagesearch.R
 import com.harshit.imagesearch.adapter.productAdapter
-import com.harshit.imagesearch.mo
+import com.harshit.imagesearch.models.ProductModel
+import java.util.ArrayList
+
+class ProductDisplayActivity : AppComp
