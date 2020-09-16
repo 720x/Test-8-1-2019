@@ -16,4 +16,6 @@ import androidx.recyclerview.widget.RecyclerView
 import butterknife.ButterKnife
 import com.bumptech.glide.Glide
 import com.google.firebase.database.*
-import c
+import com.harshit.imagesearch.listeners.IProductLoadListener
+import com.harshit.imagesearch.R
+im
