@@ -25,4 +25,5 @@ import java.util.ArrayList
 class ProductDisplayActivity : AppCompatActivity(), IProductLoadListener {
 
     lateinit var rvProductMain: RecyclerView
-    l
+    lateinit var productLoadListener: IProductLoadListener
+    lateinit var iv
