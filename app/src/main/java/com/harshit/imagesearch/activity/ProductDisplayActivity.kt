@@ -28,4 +28,6 @@ class ProductDisplayActivity : AppCompatActivity(), IProductLoadListener {
     lateinit var productLoadListener: IProductLoadListener
     lateinit var iv_query_image: ImageView
     lateinit var progressBar: ProgressBar
-    lateinit var
+    lateinit var txtProceedToTry: TextView
+
+    override fun onCreate(savedInstance
