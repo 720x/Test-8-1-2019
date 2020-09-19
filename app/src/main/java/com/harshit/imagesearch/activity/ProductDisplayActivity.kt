@@ -26,4 +26,6 @@ class ProductDisplayActivity : AppCompatActivity(), IProductLoadListener {
 
     lateinit var rvProductMain: RecyclerView
     lateinit var productLoadListener: IProductLoadListener
-    lateinit var iv
+    lateinit var iv_query_image: ImageView
+    lateinit var progressBar: ProgressBar
+    lateinit var
