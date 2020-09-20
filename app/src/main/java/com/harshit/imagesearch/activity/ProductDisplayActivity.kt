@@ -32,4 +32,5 @@ class ProductDisplayActivity : AppCompatActivity(), IProductLoadListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activit
+        setContentView(R.layout.activity_product_display)
+        rvProductMain = findViewById(R.id.rvProductMain)
