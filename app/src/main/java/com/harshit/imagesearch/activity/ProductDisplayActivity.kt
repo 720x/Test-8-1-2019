@@ -34,3 +34,5 @@ class ProductDisplayActivity : AppCompatActivity(), IProductLoadListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_product_display)
         rvProductMain = findViewById(R.id.rvProductMain)
+        iv_query_image = findViewById(R.id.iv_query_image)
+        progressBar = findViewById(R.id.prog
