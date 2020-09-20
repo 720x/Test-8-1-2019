@@ -30,4 +30,6 @@ class ProductDisplayActivity : AppCompatActivity(), IProductLoadListener {
     lateinit var progressBar: ProgressBar
     lateinit var txtProceedToTry: TextView
 
-    override fun onCreate(savedInstance
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activit
