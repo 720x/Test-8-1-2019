@@ -46,4 +46,7 @@ class ProductDisplayActivity : AppCompatActivity(), IProductLoadListener {
         loadProductFromFirebase()
 
 
-        
+        val gettingGalleryImage = intent
+        val a = gettingGalleryImage.extras
+
+       
