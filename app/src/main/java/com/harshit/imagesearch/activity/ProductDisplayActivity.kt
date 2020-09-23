@@ -38,4 +38,12 @@ class ProductDisplayActivity : AppCompatActivity(), IProductLoadListener {
         progressBar = findViewById(R.id.progressBar)
         txtProceedToTry = findViewById(R.id.txtProceedToTry)
 
-        progressBar.
+        progressBar.visibility = View.VISIBLE
+
+
+
+        init()
+        loadProductFromFirebase()
+
+
+        
