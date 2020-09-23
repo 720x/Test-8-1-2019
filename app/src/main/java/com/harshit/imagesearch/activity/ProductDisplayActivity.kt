@@ -49,4 +49,6 @@ class ProductDisplayActivity : AppCompatActivity(), IProductLoadListener {
         val gettingGalleryImage = intent
         val a = gettingGalleryImage.extras
 
-       
+        if (a != null) {
+            val i = a["GalleryImage"] as Uri?
+            val imgUri = Uri.parse(
