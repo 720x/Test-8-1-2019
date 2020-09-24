@@ -51,4 +51,11 @@ class ProductDisplayActivity : AppCompatActivity(), IProductLoadListener {
 
         if (a != null) {
             val i = a["GalleryImage"] as Uri?
-            val imgUri = Uri.parse(
+            val imgUri = Uri.parse(i.toString())
+            Glide.with(iv_query_image).load(imgUri).into(iv_query_image)
+        }
+
+        val gettingCameraImage = intent
+        val b = gettingCameraImage.extras
+
+        if (b !
