@@ -58,4 +58,6 @@ class ProductDisplayActivity : AppCompatActivity(), IProductLoadListener {
         val gettingCameraImage = intent
         val b = gettingCameraImage.extras
 
-        if (b !
+        if (b != null) {
+            val j = b["CameraImage"] as Bitmap?
+            iv_query_image.s
