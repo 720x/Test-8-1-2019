@@ -64,4 +64,9 @@ class ProductDisplayActivity : AppCompatActivity(), IProductLoadListener {
         }
 
         txtProceedToTry.setOnClickListener {
-            
+            startActivity(Intent(this@ProductDisplayActivity, CartActivity::class.java))
+        }
+
+
+    }
+
