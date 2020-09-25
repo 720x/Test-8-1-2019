@@ -60,4 +60,8 @@ class ProductDisplayActivity : AppCompatActivity(), IProductLoadListener {
 
         if (b != null) {
             val j = b["CameraImage"] as Bitmap?
-            iv_query_image.s
+            iv_query_image.setImageBitmap(j)
+        }
+
+        txtProceedToTry.setOnClickListener {
+            
