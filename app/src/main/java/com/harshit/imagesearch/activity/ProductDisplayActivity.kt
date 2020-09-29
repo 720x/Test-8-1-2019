@@ -70,3 +70,7 @@ class ProductDisplayActivity : AppCompatActivity(), IProductLoadListener {
 
     }
 
+    private fun init() {
+        ButterKnife.bind(this)
+        productLoadListener  = this
+        val l
