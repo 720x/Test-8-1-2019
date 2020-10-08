@@ -74,4 +74,5 @@ class ProductDisplayActivity : AppCompatActivity(), IProductLoadListener {
         ButterKnife.bind(this)
         productLoadListener  = this
         val layoutManager = GridLayoutManager(this, 2)
-        rvProductMain.layoutManager 
+        rvProductMain.layoutManager = layoutManager
+        rvProductMain.addItemDecoration(DividerItemDecoration(this, layoutM
