@@ -73,4 +73,5 @@ class ProductDisplayActivity : AppCompatActivity(), IProductLoadListener {
     private fun init() {
         ButterKnife.bind(this)
         productLoadListener  = this
-        val l
+        val layoutManager = GridLayoutManager(this, 2)
+        rvProductMain.layoutManager 
