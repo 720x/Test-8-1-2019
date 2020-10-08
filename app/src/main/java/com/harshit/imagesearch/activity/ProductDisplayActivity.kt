@@ -75,4 +75,8 @@ class ProductDisplayActivity : AppCompatActivity(), IProductLoadListener {
         productLoadListener  = this
         val layoutManager = GridLayoutManager(this, 2)
         rvProductMain.layoutManager = layoutManager
-        rvProductMain.addItemDecoration(DividerItemDecoration(this, layoutM
+        rvProductMain.addItemDecoration(DividerItemDecoration(this, layoutManager.orientation))
+    }
+
+    private fun loadProductFromFirebase(){
+        val coff
