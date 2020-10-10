@@ -79,4 +79,5 @@ class ProductDisplayActivity : AppCompatActivity(), IProductLoadListener {
     }
 
     private fun loadProductFromFirebase(){
-        val coff
+        val coffees: MutableList<ProductModel> = ArrayList<ProductModel>()
+       
