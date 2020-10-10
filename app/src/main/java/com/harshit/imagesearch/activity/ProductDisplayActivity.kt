@@ -80,4 +80,6 @@ class ProductDisplayActivity : AppCompatActivity(), IProductLoadListener {
 
     private fun loadProductFromFirebase(){
         val coffees: MutableList<ProductModel> = ArrayList<ProductModel>()
-       
+        progressBar.visibility = View.INVISIBLE
+
+        val instance = FirebaseDatabase.getInst
