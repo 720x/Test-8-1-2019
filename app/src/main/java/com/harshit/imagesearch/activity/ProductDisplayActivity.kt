@@ -88,4 +88,5 @@ class ProductDisplayActivity : AppCompatActivity(), IProductLoadListener {
         val listener: ValueEventListener = object : ValueEventListener {
             override fun onDataChange(collection: DataSnapshot) {
                 if (collection.exists()) {
-                    for (Pro
+                    for (ProductItem in collection.children) {
+                        val key = ProductItem.key
