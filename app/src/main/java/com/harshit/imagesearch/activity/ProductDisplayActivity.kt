@@ -86,4 +86,6 @@ class ProductDisplayActivity : AppCompatActivity(), IProductLoadListener {
         val product = instance.getReference("product")
 
         val listener: ValueEventListener = object : ValueEventListener {
-            override fun onDataChange(co
+            override fun onDataChange(collection: DataSnapshot) {
+                if (collection.exists()) {
+                    for (Pro
