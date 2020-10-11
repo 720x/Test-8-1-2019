@@ -82,4 +82,7 @@ class ProductDisplayActivity : AppCompatActivity(), IProductLoadListener {
         val coffees: MutableList<ProductModel> = ArrayList<ProductModel>()
         progressBar.visibility = View.INVISIBLE
 
-        val instance = FirebaseDatabase.getInst
+        val instance = FirebaseDatabase.getInstance()
+        val product = instance.getReference("product")
+
+        val listener: ValueEvent
