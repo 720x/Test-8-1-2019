@@ -85,4 +85,5 @@ class ProductDisplayActivity : AppCompatActivity(), IProductLoadListener {
         val instance = FirebaseDatabase.getInstance()
         val product = instance.getReference("product")
 
-        val listener: ValueEvent
+        val listener: ValueEventListener = object : ValueEventListener {
+            override fun onDataChange(co
