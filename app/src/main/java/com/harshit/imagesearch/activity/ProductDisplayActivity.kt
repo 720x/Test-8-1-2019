@@ -90,4 +90,7 @@ class ProductDisplayActivity : AppCompatActivity(), IProductLoadListener {
                 if (collection.exists()) {
                     for (ProductItem in collection.children) {
                         val key = ProductItem.key
-                        val imgUrl = ProductItem.child("imgUrl").getV
+                        val imgUrl = ProductItem.child("imgUrl").getValue(
+                            String::class.java
+                        )
+         
