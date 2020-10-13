@@ -93,4 +93,5 @@ class ProductDisplayActivity : AppCompatActivity(), IProductLoadListener {
                         val imgUrl = ProductItem.child("imgUrl").getValue(
                             String::class.java
                         )
-         
+                        val coffee = ProductModel(key,imgUrl)
+                 
