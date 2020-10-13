@@ -94,4 +94,6 @@ class ProductDisplayActivity : AppCompatActivity(), IProductLoadListener {
                             String::class.java
                         )
                         val coffee = ProductModel(key,imgUrl)
-                 
+                        coffees.add(coffee)
+                    }
+                    productLoadListene
