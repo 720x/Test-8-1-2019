@@ -98,4 +98,5 @@ class ProductDisplayActivity : AppCompatActivity(), IProductLoadListener {
                     }
                     productLoadListener.onProductLoadSuccess(coffees)
                 } else {
-               
+                    // TODO: Just directly show error toast
+                    productLoadListene
