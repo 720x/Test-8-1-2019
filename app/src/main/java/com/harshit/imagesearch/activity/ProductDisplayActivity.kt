@@ -99,4 +99,6 @@ class ProductDisplayActivity : AppCompatActivity(), IProductLoadListener {
                     productLoadListener.onProductLoadSuccess(coffees)
                 } else {
                     // TODO: Just directly show error toast
-                    productLoadListene
+                    productLoadListener.onProductLoadFailed("Error: Firebase menu list not found.")
+                }
+            }
