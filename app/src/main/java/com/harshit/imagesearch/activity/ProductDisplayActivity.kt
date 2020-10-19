@@ -102,3 +102,6 @@ class ProductDisplayActivity : AppCompatActivity(), IProductLoadListener {
                     productLoadListener.onProductLoadFailed("Error: Firebase menu list not found.")
                 }
             }
+
+            override fun onCancelled(error: DatabaseError) {
+                // TODO: 
