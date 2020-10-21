@@ -109,4 +109,8 @@ class ProductDisplayActivity : AppCompatActivity(), IProductLoadListener {
             }
         }
 
-        product.addListenerForSingleValueEvent(listene
+        product.addListenerForSingleValueEvent(listener)
+    }
+
+
+    override fun onProductLoadSuccess(productModelList: List<ProductModel?>?
