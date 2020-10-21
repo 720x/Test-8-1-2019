@@ -105,4 +105,8 @@ class ProductDisplayActivity : AppCompatActivity(), IProductLoadListener {
 
             override fun onCancelled(error: DatabaseError) {
                 // TODO: Just directly show error toast
-                productLoadListener.onProductLoadFailed
+                productLoadListener.onProductLoadFailed(error.message)
+            }
+        }
+
+        product.addListenerForSingleValueEvent(listene
