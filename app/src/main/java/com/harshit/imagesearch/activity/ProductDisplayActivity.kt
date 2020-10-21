@@ -113,4 +113,5 @@ class ProductDisplayActivity : AppCompatActivity(), IProductLoadListener {
     }
 
 
-    override fun onProductLoadSuccess(productModelList: List<ProductModel?>?
+    override fun onProductLoadSuccess(productModelList: List<ProductModel?>?) {
+        val productAdapter = productAdapter(this, productModelList as List<Pro
