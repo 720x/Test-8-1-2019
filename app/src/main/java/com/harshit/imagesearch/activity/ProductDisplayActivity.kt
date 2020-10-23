@@ -119,4 +119,5 @@ class ProductDisplayActivity : AppCompatActivity(), IProductLoadListener {
     }
 
 
-  
+    override fun onProductLoadFailed(message: String?) {
+        Toast.makeT
