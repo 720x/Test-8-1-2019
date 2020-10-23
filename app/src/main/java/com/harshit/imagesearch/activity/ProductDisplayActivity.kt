@@ -120,4 +120,7 @@ class ProductDisplayActivity : AppCompatActivity(), IProductLoadListener {
 
 
     override fun onProductLoadFailed(message: String?) {
-        Toast.makeT
+        Toast.makeText(this, "error", Toast.LENGTH_SHORT).show()
+    }
+
+}
