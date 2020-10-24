@@ -131,3 +131,91 @@ class ProductSearchActivity : AppCompatActivity() {
                             println(image.url + " : " + image.score)
                         }
                         println("%nPages with fully matching images: Score%n==")
+                        for (image in annotation.fullMatchingImagesList) {
+                            println(image.url + " : " + image.score)
+                        }
+                        println("%nPages with visually similar images: Score%n==")
+                        for (image in annotation.visuallySimilarImagesList) {
+                            println(image.url + " : " + image.score)
+                        }
+
+                    }
+                }
+
+            } catch (e: Exception) {
+                Log.d(TAG, " ${e.message}")
+                println("tier3")
+
+            }
+        }
+
+    }
+
+
+
+
+
+
+
+
+    private fun convertBitmapToBase64(bitmap: Bitmap): String {
+        val byteArrayOutputStream = ByteArrayOutputStream()
+        bitmap.compress(Bitmap.CompressFormat.PNG, 100, byteArrayOutputStream)
+        val byteArray: ByteArray = byteArrayOutputStream.toByteArray()
+        return Base64.encodeToString(byteArray, Base64.DEFAULT)
+    }
+    /**
+     * Use Product Search API to search with the given query image
+     */
+    private fun searchByImage(queryImage: Bitmap) {
+        apiClient.annotateImage(queryImage)
+            .addOnSuccessListener { showSearchResult(it) }
+            .addOnFailureListener { error ->
+                Log.e(TAG, "Error calling Vision API Product Search.", error)
+                showErrorResponse(error.localizedMessage)
+            }
+    }
+
+    /**
+     * Show search result.
+     */
+    private fun showSearchResult(result: List<ProductSearchResult>) {
+        viewBinding.progressBar2.visibility = View.GONE
+
+        // Update the recycler view to display the search result.
+
+    }
+
+
+
+    /**
+     * Show Error Response
+     */
+    private fun showErrorResponse(message: String?) {
+        viewBinding.progressBar2.visibility = View.GONE
+        // Show the error when calling API.
+        Toast.makeText(this, "Error: $message", Toast.LENGTH_SHORT).show()
+    }
+
+
+}
+
+/**
+ * Adapter RecyclerView
+ */
+class ProductSearchAdapter :
+    ListAdapter<ProductSearchResult, ProductSearchAdapter.ProductViewHolder>(diffCallback) {
+
+    companion object {
+        val diffCallback = object : DiffUtil.ItemCallback<ProductSearchResult>() {
+            override fun areItemsTheSame(
+                oldItem: ProductSearchResult,
+                newItem: ProductSearchResult
+            ) = oldItem.imageId == newItem.imageId && oldItem.imageUri == newItem.imageUri
+
+            override fun areContentsTheSame(
+                oldItem: ProductSearchResult,
+                newItem: ProductSearchResult
+            ) = oldItem == newItem
+        }
+    }
