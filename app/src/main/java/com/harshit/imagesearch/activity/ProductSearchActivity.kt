@@ -219,3 +219,33 @@ class ProductSearchAdapter :
             ) = oldItem == newItem
         }
     }
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = ProductViewHolder(
+        LayoutInflater.from(parent.context).inflate(R.layout.item_product, parent, false)
+    )
+
+    override fun onBindViewHolder(holder: ProductViewHolder, position: Int) {
+        holder.bind(getItem(position))
+    }
+
+
+    /**
+     * ViewHolder to hold the data inside
+     */
+    class ProductViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+
+        /**
+         * Bind data to views
+         */
+        @SuppressLint("SetTextI18n")
+        fun bind(product: ProductSearchResult) {
+            with(itemView) {
+                findViewById<TextView>(R.id.tvProductName).text = "Name: ${product.name}"
+                findViewById<TextView>(R.id.tvProductScore).text = "Similarity score: ${product.score}"
+                findViewById<TextView>(R.id.tvProductLabel).text = "Labels: ${product.label}"
+                // Show the image using Glide
+                Glide.with(itemView).load(product.imageUri).into(findViewById(R.id.ivProduct))
+            }
+        }
+    }
+}
