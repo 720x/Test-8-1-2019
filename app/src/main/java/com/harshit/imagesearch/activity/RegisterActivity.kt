@@ -53,3 +53,58 @@ class RegisterActivity : AppCompatActivity() {
 
         }
     }
+
+    open fun insertUserData() {
+        userDatabase = FirebaseDatabase
+            .getInstance().getReference("users")
+            .child(FirebaseAuth.getInstance().currentUser!!.uid)
+        val userName = etRegisterName!!.text.toString()
+        val userEmail = etRegisterEmail!!.text.toString()
+
+        val userModels = UserModel()
+        userModels.setName(userName)
+        userModels.setEmail(userEmail)
+        userDatabase!!.push().setValue(userModels)
+    }
+
+    private fun createUser() {
+        val registerEmail = etRegisterEmail!!.text.toString()
+        val registerPassword = etRegisterPassword!!.text.toString()
+        if (TextUtils.isEmpty(registerEmail)) {
+            etRegisterEmail!!.error = "Email cannot be empty.."
+            etRegisterEmail!!.requestFocus()
+        } else if (TextUtils.isEmpty(registerPassword)) {
+            etRegisterPassword!!.error = "Password cannot be empty.."
+            etRegisterPassword!!.requestFocus()
+        } else {
+            mAuth!!.createUserWithEmailAndPassword(registerEmail, registerPassword)
+                .addOnCompleteListener(this,
+                    OnCompleteListener { task: Task<AuthResult?> ->
+                        if (task.isSuccessful) {
+                            Toast.makeText(
+                                this@RegisterActivity,
+                                "User registered Successfully",
+                                Toast.LENGTH_SHORT
+                            ).show()
+                            startActivity(
+                                Intent(
+                                    this@RegisterActivity,
+                                    MainActivity::class.java
+                                )
+                            )
+                        } else {
+                            Toast.makeText(
+                                this@RegisterActivity,
+                                "Registration error: Invalid Email or Password",
+                                Toast.LENGTH_SHORT
+                            ).show()
+                        }
+                    })
+        }
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        finish()
+    }
+}
