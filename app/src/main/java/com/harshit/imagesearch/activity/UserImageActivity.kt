@@ -132,3 +132,64 @@ class UserImageActivity : AppCompatActivity() {
     private fun showMessageOKCancel(message: String, okListener: DialogInterface.OnClickListener) {
         AlertDialog.Builder(this)
             .setMessage(message)
+            .setPositiveButton("OK", okListener)
+            .setNegativeButton("Cancel", null)
+            .create()
+            .show()
+    }
+
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<out String>,
+        grantResults: IntArray
+    ) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+
+        if(requestCode== CAMERA_PERMISSION_CODE){
+            if(grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED){
+                checkPermission(
+                    android.Manifest.permission.READ_EXTERNAL_STORAGE,
+                    READ_STORAGE_PERMISSION_CODE
+                )
+            }
+            else{
+                Toast.makeText(this@UserImageActivity, "Camera Permission Denied", Toast.LENGTH_SHORT).show()
+            }
+        }else if(requestCode== READ_STORAGE_PERMISSION_CODE){
+            if(grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED){
+                checkPermission(
+                    android.Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                    WRITE_STORAGE_PERMISSION_CODE
+                )
+            }
+            else{
+                Toast.makeText(this@UserImageActivity, "Storage Permission Denied", Toast.LENGTH_SHORT).show()
+            }
+        }
+        else if(requestCode== WRITE_STORAGE_PERMISSION_CODE)
+        {
+            if(!(grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED)){
+                Toast.makeText(this@UserImageActivity, "Storage Permission Denied", Toast.LENGTH_SHORT).show()
+            }
+
+        }
+
+    }
+
+    override fun onBackPressed() {
+        if(imgUserImage.isVisible){
+            imgUserImage.visibility = View.GONE
+            txtUserDisplay.visibility = View.VISIBLE
+            imgUserDisplay.visibility = View.VISIBLE
+        }else{
+            super.onBackPressed()
+        }
+    }
+
+    override fun onStart() {
+        checkPermission( android.Manifest.permission.CAMERA,
+            CAMERA_PERMISSION_CODE)
+        super.onStart()
+    }
+
+}
