@@ -43,3 +43,92 @@ class UserImageActivity : AppCompatActivity() {
 
     private lateinit var cameraLauncher: ActivityResultLauncher<Intent>
     private lateinit var galleryLauncher: ActivityResultLauncher<Intent>
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_user_image)
+
+        btnUserGallery = findViewById(R.id.btnUserGallery)
+        btnUserCamera = findViewById(R.id.btnUserCamera)
+        imgUserImage = findViewById(R.id.imgUserImage)
+        imgPassProduct = findViewById(R.id.imgPassProduct)
+        txtUserDisplay = findViewById(R.id.txtUserDisplay)
+        imgUserDisplay = findViewById(R.id.imgUserDisplay)
+
+        imgUserImage.visibility = View.GONE
+
+        val gettingTryOnImage = intent
+        val a = gettingTryOnImage.extras
+
+        if (a != null) {
+            val i = a["userPassImage"] as String?
+            val imgUri = i.toString()
+            Glide.with(imgPassProduct).load(imgUri).into(imgPassProduct)
+        }
+
+        cameraLauncher = registerForActivityResult(
+            ActivityResultContracts.StartActivityForResult()
+        ) { result ->
+            val data = result?.data
+            try {
+                val photo = data?.extras?.get("data") as Bitmap
+                val myCameraIntent = Intent(this@UserImageActivity, TryOnActivity::class.java)
+                myCameraIntent.putExtra("CameraUserImage", photo)
+
+                startActivity(myCameraIntent)
+                imgUserImage.setImageBitmap(photo)
+                imgUserImage.visibility = View.VISIBLE
+                imgUserDisplay.visibility = View.INVISIBLE
+                txtUserDisplay.visibility = View.INVISIBLE
+            } catch (e: Exception) {
+                Log.d(TAG, "onActivityResult: ${e.message}")
+            }
+        }
+
+        galleryLauncher = registerForActivityResult(
+            ActivityResultContracts.StartActivityForResult()
+        ) { result ->
+            val data = result?.data
+            try {
+                val myGalleryIntent = Intent(this@UserImageActivity, TryOnActivity::class.java)
+                myGalleryIntent.putExtra("GalleryUserImage", data?.data)
+                myGalleryIntent.putExtra("userPassImage", imgPassProduct.drawable.toBitmap())
+                startActivity(myGalleryIntent)
+                imgUserImage.setImageURI(data?.data)
+                imgUserImage.visibility = View.VISIBLE
+                imgUserDisplay.visibility = View.INVISIBLE
+                txtUserDisplay.visibility = View.INVISIBLE
+            } catch (e: Exception) {
+
+            }
+        }
+
+        btnUserGallery.setOnClickListener {
+            val storageIntent = Intent()
+            storageIntent.type = "image/*"
+            storageIntent.action = Intent.ACTION_GET_CONTENT
+            galleryLauncher.launch(storageIntent)
+        }
+
+        btnUserCamera.setOnClickListener {
+            val cameraIntent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
+            cameraLauncher.launch(cameraIntent)
+        }
+
+    }
+
+    private fun checkPermission(permission:String, requestCode: Int){
+        if(ContextCompat.checkSelfPermission(
+                this@UserImageActivity, Manifest.permission.CAMERA)== PackageManager.PERMISSION_DENIED){
+
+            showMessageOKCancel(
+                "You need to allow camera usage"
+            ) { _, _ ->
+                ActivityCompat.requestPermissions(this@UserImageActivity, arrayOf(permission), requestCode)
+            }
+        }
+    }
+
+    private fun showMessageOKCancel(message: String, okListener: DialogInterface.OnClickListener) {
+        AlertDialog.Builder(this)
+            .setMessage(message)
