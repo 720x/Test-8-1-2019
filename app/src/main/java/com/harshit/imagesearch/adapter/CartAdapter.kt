@@ -13,4 +13,6 @@ import butterknife.ButterKnife
 import butterknife.Unbinder
 import com.bumptech.glide.Glide
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.FirebaseDat
+import com.google.firebase.database.FirebaseDatabase
+import com.harshit.imagesearch.R
+import com.harshit.imagesearch.activity.TryOnA
