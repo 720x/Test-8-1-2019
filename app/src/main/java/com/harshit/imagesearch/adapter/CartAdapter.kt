@@ -21,4 +21,6 @@ import com.harshit.imagesearch.models.CartModel
 
 class cartAdapter(private val context: Context, cartModelList: List<CartModel>) :
     RecyclerView.Adapter<cartAdapter.MyCartViewHolder>() {
- 
+    private var cartModelList: List<CartModel> = cartModelList
+
+    override fun
