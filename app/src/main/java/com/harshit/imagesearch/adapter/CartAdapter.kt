@@ -17,4 +17,6 @@ import com.google.firebase.database.FirebaseDatabase
 import com.harshit.imagesearch.R
 import com.harshit.imagesearch.activity.TryOnActivity
 import com.harshit.imagesearch.activity.UserImageActivity
-import com.hars
+import com.harshit.imagesearch.models.CartModel
+
+class cartAdapter(private val context: Context, 
