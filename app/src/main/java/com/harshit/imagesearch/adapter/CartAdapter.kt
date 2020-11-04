@@ -19,4 +19,6 @@ import com.harshit.imagesearch.activity.TryOnActivity
 import com.harshit.imagesearch.activity.UserImageActivity
 import com.harshit.imagesearch.models.CartModel
 
-class cartAdapter(private val context: Context, 
+class cartAdapter(private val context: Context, cartModelList: List<CartModel>) :
+    RecyclerView.Adapter<cartAdapter.MyCartViewHolder>() {
+ 
