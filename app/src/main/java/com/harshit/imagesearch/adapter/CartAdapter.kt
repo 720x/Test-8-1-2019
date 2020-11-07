@@ -25,4 +25,9 @@ class cartAdapter(private val context: Context, cartModelList: List<CartModel>) 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyCartViewHolder {
         return MyCartViewHolder(
-            LayoutInflater.from(context).inflate(R.layout.cart_li
+            LayoutInflater.from(context).inflate(R.layout.cart_list_item_design, parent, false)
+        )
+    }
+
+
+    override fun onBindViewHolder(holder: My
