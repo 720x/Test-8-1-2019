@@ -24,4 +24,5 @@ class cartAdapter(private val context: Context, cartModelList: List<CartModel>) 
     private var cartModelList: List<CartModel> = cartModelList
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyCartViewHolder {
-        retu
+        return MyCartViewHolder(
+            LayoutInflater.from(context).inflate(R.layout.cart_li
