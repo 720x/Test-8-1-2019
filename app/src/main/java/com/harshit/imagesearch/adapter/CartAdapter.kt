@@ -30,4 +30,7 @@ class cartAdapter(private val context: Context, cartModelList: List<CartModel>) 
     }
 
 
-    override fun onBindViewHolder(holder: My
+    override fun onBindViewHolder(holder: MyCartViewHolder, position: Int) {
+
+        val currentItem = cartModelList[position]
+        Glide.
