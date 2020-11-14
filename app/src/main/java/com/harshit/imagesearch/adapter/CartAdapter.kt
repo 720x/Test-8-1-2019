@@ -36,4 +36,5 @@ class cartAdapter(private val context: Context, cartModelList: List<CartModel>) 
         Glide.with(holder.imgProductCart).load(currentItem.imgUrl).into(holder.imgProductCart)
 
         holder.btnRemove.setOnClickListener(View.OnClickListener {
-            removeFromCart(ca
+            removeFromCart(cartModelList[position])
+            Toast.makeText(context, "Item removed from cart", Toast.LENGTH_SHORT).show()
