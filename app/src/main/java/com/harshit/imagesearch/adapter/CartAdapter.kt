@@ -38,3 +38,8 @@ class cartAdapter(private val context: Context, cartModelList: List<CartModel>) 
         holder.btnRemove.setOnClickListener(View.OnClickListener {
             removeFromCart(cartModelList[position])
             Toast.makeText(context, "Item removed from cart", Toast.LENGTH_SHORT).show()
+        })
+
+
+        holder.btnTryOn.setOnClickListener {
+            val photo = currentItem.
