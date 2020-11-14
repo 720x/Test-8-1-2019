@@ -33,4 +33,7 @@ class cartAdapter(private val context: Context, cartModelList: List<CartModel>) 
     override fun onBindViewHolder(holder: MyCartViewHolder, position: Int) {
 
         val currentItem = cartModelList[position]
-        Glide.with(holder.imgProductCart).load(currentItem.imgUrl).into(holder.imgProductC
+        Glide.with(holder.imgProductCart).load(currentItem.imgUrl).into(holder.imgProductCart)
+
+        holder.btnRemove.setOnClickListener(View.OnClickListener {
+            removeFromCart(ca
