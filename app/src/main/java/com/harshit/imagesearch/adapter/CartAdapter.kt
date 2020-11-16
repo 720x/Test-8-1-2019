@@ -45,4 +45,11 @@ class cartAdapter(private val context: Context, cartModelList: List<CartModel>) 
             val photo = currentItem.imgUrl
             val tryOnIntent = Intent(context, UserImageActivity::class.java)
             tryOnIntent.putExtra("userPassImage", photo)
-            context.startActivity(t
+            context.startActivity(tryOnIntent)
+        }
+
+
+    }
+
+    private fun removeFromCart(cartModel: CartModel) {
+    
