@@ -44,4 +44,5 @@ class cartAdapter(private val context: Context, cartModelList: List<CartModel>) 
         holder.btnTryOn.setOnClickListener {
             val photo = currentItem.imgUrl
             val tryOnIntent = Intent(context, UserImageActivity::class.java)
-        
+            tryOnIntent.putExtra("userPassImage", photo)
+            context.startActivity(t
