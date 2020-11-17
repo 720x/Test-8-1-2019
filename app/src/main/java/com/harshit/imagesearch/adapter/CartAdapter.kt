@@ -52,4 +52,6 @@ class cartAdapter(private val context: Context, cartModelList: List<CartModel>) 
     }
 
     private fun removeFromCart(cartModel: CartModel) {
-    
+        FirebaseDatabase.getInstance()
+            .getReference("cart")
+            .child(Fir
