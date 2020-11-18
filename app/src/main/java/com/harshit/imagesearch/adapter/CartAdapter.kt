@@ -56,4 +56,10 @@ class cartAdapter(private val context: Context, cartModelList: List<CartModel>) 
             .getReference("cart")
             .child(FirebaseAuth.getInstance().currentUser!!.uid)
             .child(cartModel.key!!)
-          
+            .removeValue()
+    }
+
+
+
+    override fun getItemCount(): Int {
+        return c
