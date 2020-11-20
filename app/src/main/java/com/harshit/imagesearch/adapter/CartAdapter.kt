@@ -62,4 +62,7 @@ class cartAdapter(private val context: Context, cartModelList: List<CartModel>) 
 
 
     override fun getItemCount(): Int {
-        return c
+        return cartModelList.size
+    }
+
+    inner class MyCartViewHolder(itemView: View) : RecyclerView.Vie
