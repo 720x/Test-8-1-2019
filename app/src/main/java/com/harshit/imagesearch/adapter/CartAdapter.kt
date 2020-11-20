@@ -65,4 +65,7 @@ class cartAdapter(private val context: Context, cartModelList: List<CartModel>) 
         return cartModelList.size
     }
 
-    inner class MyCartViewHolder(itemView: View) : RecyclerView.Vie
+    inner class MyCartViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+
+
+        val imgProductCart: ImageView = itemView.findViewById(R.id.
