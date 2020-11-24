@@ -68,4 +68,5 @@ class cartAdapter(private val context: Context, cartModelList: List<CartModel>) 
     inner class MyCartViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
 
-        val imgProductCart: ImageView = itemView.findViewById(R.id.
+        val imgProductCart: ImageView = itemView.findViewById(R.id.imgProductCart)
+        val btnTryOn: Button = itemView.findViewById(R.id.
