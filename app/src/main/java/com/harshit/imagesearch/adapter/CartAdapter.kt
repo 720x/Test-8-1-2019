@@ -71,3 +71,10 @@ class cartAdapter(private val context: Context, cartModelList: List<CartModel>) 
         val imgProductCart: ImageView = itemView.findViewById(R.id.imgProductCart)
         val btnTryOn: Button = itemView.findViewById(R.id.btnTryOn)
         val btnRemove: Button  = itemView.findViewById(R.id.btnRemove)
+
+
+        var unbinder: Unbinder = ButterKnife.bind(this, itemView)
+
+    }
+
+}
