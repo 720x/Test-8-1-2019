@@ -15,4 +15,8 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 import com.harshit.imagesearch.R
 import com.harshit.imagesearch.models.CartModel
-import com.ha
+import com.harshit.imagesearch.models.ProductModel
+import java.lang.Exception
+
+
+class productAdapter(
