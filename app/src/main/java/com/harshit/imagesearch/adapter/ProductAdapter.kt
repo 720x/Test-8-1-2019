@@ -19,4 +19,5 @@ import com.harshit.imagesearch.models.ProductModel
 import java.lang.Exception
 
 
-class productAdapter(
+class productAdapter(private val context: Context, productModelList: List<ProductModel>) :
+    RecyclerView.Adapt
