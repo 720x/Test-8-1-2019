@@ -21,4 +21,6 @@ import java.lang.Exception
 
 class productAdapter(private val context: Context, productModelList: List<ProductModel>) :
     RecyclerView.Adapter<productAdapter.MyProductViewHolder>() {
-    private var productModelList: List<Produ
+    private var productModelList: List<ProductModel> = productModelList
+
+    override fun onCreateViewHolder(paren
