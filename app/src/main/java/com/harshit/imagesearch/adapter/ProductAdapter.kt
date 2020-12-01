@@ -23,4 +23,6 @@ class productAdapter(private val context: Context, productModelList: List<Produc
     RecyclerView.Adapter<productAdapter.MyProductViewHolder>() {
     private var productModelList: List<ProductModel> = productModelList
 
-    override fun onCreateViewHolder(paren
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyProductViewHolder {
+        return MyProductViewHolder(
+      
