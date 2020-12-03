@@ -30,4 +30,7 @@ class productAdapter(private val context: Context, productModelList: List<Produc
     }
 
 
-    override fun onBindViewHolder(holder: MyProductViewHo
+    override fun onBindViewHolder(holder: MyProductViewHolder, position: Int) {
+
+        val currentItem = productModelList[position]
+        Gl
