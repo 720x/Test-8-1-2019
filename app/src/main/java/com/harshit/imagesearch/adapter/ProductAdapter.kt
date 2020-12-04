@@ -36,4 +36,13 @@ class productAdapter(private val context: Context, productModelList: List<Produc
         Glide.with(holder.imgProduct).load(currentItem.imgUrl).into(holder.imgProduct)
 
         holder.btnAddToCart.setOnClickListener(View.OnClickListener {
-            addToCart(productModelL
+            addToCart(productModelList[position])
+        })
+
+
+
+
+
+    }
+
+    private fun addToCart(productModel: Pr
