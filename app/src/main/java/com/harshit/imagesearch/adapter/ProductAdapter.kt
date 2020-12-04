@@ -33,4 +33,6 @@ class productAdapter(private val context: Context, productModelList: List<Produc
     override fun onBindViewHolder(holder: MyProductViewHolder, position: Int) {
 
         val currentItem = productModelList[position]
-        Gl
+        Glide.with(holder.imgProduct).load(currentItem.imgUrl).into(holder.imgProduct)
+
+        holde
