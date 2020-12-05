@@ -50,4 +50,5 @@ class productAdapter(private val context: Context, productModelList: List<Produc
             .getInstance()
             .getReference("cart")
             .child(FirebaseAuth.getInstance().currentUser!!.uid)
-        userFavs.child
+        userFavs.child(productModel.key!!)
+            .addListenerForSingleValueEvent(object : ValueEv
