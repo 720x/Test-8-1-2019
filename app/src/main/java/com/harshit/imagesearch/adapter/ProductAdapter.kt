@@ -48,4 +48,6 @@ class productAdapter(private val context: Context, productModelList: List<Produc
     private fun addToCart(productModel: ProductModel) {
         val userFavs = FirebaseDatabase
             .getInstance()
-            .getRe
+            .getReference("cart")
+            .child(FirebaseAuth.getInstance().currentUser!!.uid)
+        userFavs.child
