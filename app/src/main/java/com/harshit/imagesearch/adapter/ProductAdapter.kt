@@ -51,4 +51,5 @@ class productAdapter(private val context: Context, productModelList: List<Produc
             .getReference("cart")
             .child(FirebaseAuth.getInstance().currentUser!!.uid)
         userFavs.child(productModel.key!!)
-            .addListenerForSingleValueEvent(object : ValueEv
+            .addListenerForSingleValueEvent(object : ValueEventListener {
+                override fun onDataChange(snapshot: DataSnapshot) 
