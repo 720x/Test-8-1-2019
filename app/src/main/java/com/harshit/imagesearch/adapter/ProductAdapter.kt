@@ -54,4 +54,5 @@ class productAdapter(private val context: Context, productModelList: List<Produc
             .addListenerForSingleValueEvent(object : ValueEventListener {
                 override fun onDataChange(snapshot: DataSnapshot) {
                     if (snapshot.exists()) {
-                        Toast.makeTe
+                        Toast.makeText(context, "Product already in cart", Toast.LENGTH_SHORT).show()
+        
