@@ -52,4 +52,6 @@ class productAdapter(private val context: Context, productModelList: List<Produc
             .child(FirebaseAuth.getInstance().currentUser!!.uid)
         userFavs.child(productModel.key!!)
             .addListenerForSingleValueEvent(object : ValueEventListener {
-                override fun onDataChange(snapshot: DataSnapshot) 
+                override fun onDataChange(snapshot: DataSnapshot) {
+                    if (snapshot.exists()) {
+                        Toast.makeTe
