@@ -55,4 +55,6 @@ class productAdapter(private val context: Context, productModelList: List<Produc
                 override fun onDataChange(snapshot: DataSnapshot) {
                     if (snapshot.exists()) {
                         Toast.makeText(context, "Product already in cart", Toast.LENGTH_SHORT).show()
-        
+                    } else {
+                        val cartModel = CartModel()
+         
