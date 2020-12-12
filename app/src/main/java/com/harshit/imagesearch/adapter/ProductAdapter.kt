@@ -59,4 +59,5 @@ class productAdapter(private val context: Context, productModelList: List<Produc
                         val cartModel = CartModel()
                         cartModel.key = productModel.key
 
-                        cartModel.img
+                        cartModel.imgUrl = productModel.imgUrl
+                        userFavs.child(productModel.key!!
