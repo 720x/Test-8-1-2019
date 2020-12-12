@@ -57,4 +57,6 @@ class productAdapter(private val context: Context, productModelList: List<Produc
                         Toast.makeText(context, "Product already in cart", Toast.LENGTH_SHORT).show()
                     } else {
                         val cartModel = CartModel()
-         
+                        cartModel.key = productModel.key
+
+                        cartModel.img
