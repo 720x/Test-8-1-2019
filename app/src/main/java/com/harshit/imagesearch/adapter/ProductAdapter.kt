@@ -60,4 +60,6 @@ class productAdapter(private val context: Context, productModelList: List<Produc
                         cartModel.key = productModel.key
 
                         cartModel.imgUrl = productModel.imgUrl
-                        userFavs.child(productModel.key!!
+                        userFavs.child(productModel.key!!)
+                            .setValue(cartModel)
+                            .addOnSuccess
