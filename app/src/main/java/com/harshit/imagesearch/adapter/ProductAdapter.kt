@@ -64,4 +64,5 @@ class productAdapter(private val context: Context, productModelList: List<Produc
                             .setValue(cartModel)
                             .addOnSuccessListener { aVoid: Void? ->
 
-                                    Toast.makeText(context
+                                    Toast.makeText(context, "Item added to cart", Toast.LENGTH_SHORT).show()
+                  
