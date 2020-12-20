@@ -71,4 +71,6 @@ class productAdapter(private val context: Context, productModelList: List<Produc
 
                             }
                     }
-      
+                }
+
+                override fun onCancelled(error: DatabaseError) 
