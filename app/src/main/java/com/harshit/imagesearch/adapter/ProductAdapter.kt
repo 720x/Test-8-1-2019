@@ -67,4 +67,8 @@ class productAdapter(private val context: Context, productModelList: List<Produc
                                     Toast.makeText(context, "Item added to cart", Toast.LENGTH_SHORT).show()
                             }
                             .addOnFailureListener { e: Exception ->
-                                Toast.makeText(context, "Couldn't add to Cart"
+                                Toast.makeText(context, "Couldn't add to Cart", Toast.LENGTH_SHORT).show()
+
+                            }
+                    }
+      
