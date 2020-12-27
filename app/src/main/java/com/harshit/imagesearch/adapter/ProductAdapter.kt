@@ -80,4 +80,7 @@ class productAdapter(private val context: Context, productModelList: List<Produc
     }
 
     override fun getItemCount(): Int {
-        return
+        return productModelList.size
+    }
+
+    inner class MyProductViewHolder(itemView: View) :
