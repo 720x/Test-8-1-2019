@@ -75,4 +75,9 @@ class productAdapter(private val context: Context, productModelList: List<Produc
 
                 override fun onCancelled(error: DatabaseError) {
                     Toast.makeText(context, "Database error", Toast.LENGTH_SHORT).show()
-     
+                }
+            })
+    }
+
+    override fun getItemCount(): Int {
+        return
