@@ -83,4 +83,6 @@ class productAdapter(private val context: Context, productModelList: List<Produc
         return productModelList.size
     }
 
-    inner class MyProductViewHolder(itemView: View) :
+    inner class MyProductViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+
+        val imgProduct: ImageView = itemView.findViewBy
