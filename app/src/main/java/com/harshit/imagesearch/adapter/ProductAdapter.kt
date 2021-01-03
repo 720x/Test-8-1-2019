@@ -93,4 +93,8 @@ class productAdapter(private val context: Context, productModelList: List<Produc
         var unbinder: Unbinder
 
         init {
-           
+            unbinder = ButterKnife.bind(this, itemView)
+        }
+    }
+
+}
