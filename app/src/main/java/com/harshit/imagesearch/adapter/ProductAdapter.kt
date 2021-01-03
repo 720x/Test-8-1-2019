@@ -86,4 +86,11 @@ class productAdapter(private val context: Context, productModelList: List<Produc
     inner class MyProductViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         val imgProduct: ImageView = itemView.findViewById(R.id.imgProduct1)
-        val btnAddToCart: Button = itemView.findViewById(R.id.
+        val btnAddToCart: Button = itemView.findViewById(R.id.btnAddToCart)
+
+
+
+        var unbinder: Unbinder
+
+        init {
+           
