@@ -7,4 +7,5 @@ import android.view.View
 import android.view.ViewGroup
 import com.harshit.imagesearch.R
 
-// TODO: Rename paramet
+// TODO: Rename parameter arguments, choose names that match
+// the fragment initialization parameters, e.g.
