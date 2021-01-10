@@ -19,4 +19,5 @@ private const val ARG_PARAM2 = "param2"
  */
 class FAQsFragment : Fragment() {
     // TODO: Rename and change types of parameters
-    priva
+    private var param1: String? = null
+    private var param2: String? =
