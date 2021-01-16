@@ -30,4 +30,6 @@ class FAQsFragment : Fragment() {
         }
     }
 
-    over
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        sa
