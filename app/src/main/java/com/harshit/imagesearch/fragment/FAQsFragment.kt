@@ -23,4 +23,6 @@ class FAQsFragment : Fragment() {
     private var param2: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(
+        super.onCreate(savedInstanceState)
+        arguments?.let {
+            param1 = it.getString(
