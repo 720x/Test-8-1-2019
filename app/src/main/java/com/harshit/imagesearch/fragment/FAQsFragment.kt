@@ -32,4 +32,6 @@ class FAQsFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
-        sa
+        savedInstanceState: Bundle?
+    ): View? {
+        // Inflate the layout
