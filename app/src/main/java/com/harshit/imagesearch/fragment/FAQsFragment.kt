@@ -49,4 +49,6 @@ class FAQsFragment : Fragment() {
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
-        fun newInstance
+        fun newInstance(param1: String, param2: String) =
+            FAQsFragment().apply {
+                ar
