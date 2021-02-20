@@ -51,4 +51,6 @@ class FAQsFragment : Fragment() {
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
             FAQsFragment().apply {
-                ar
+                arguments = Bundle().apply {
+                    putString(ARG_PARAM1, param1)
+          
