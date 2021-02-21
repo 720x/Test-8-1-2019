@@ -53,4 +53,8 @@ class FAQsFragment : Fragment() {
             FAQsFragment().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
-          
+                    putString(ARG_PARAM2, param2)
+                }
+            }
+    }
+}
