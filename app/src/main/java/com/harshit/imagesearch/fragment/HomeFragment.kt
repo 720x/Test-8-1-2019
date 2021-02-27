@@ -9,4 +9,6 @@ import android.view.ViewGroup
 import android.widget.Button
 import com.harshit.imagesearch.R
 
-// TODO: Rename parameter arguments, choose names that matc
+// TODO: Rename parameter arguments, choose names that match
+// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+private const v
