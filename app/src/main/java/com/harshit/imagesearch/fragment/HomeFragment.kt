@@ -7,4 +7,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import com.harshit.
+import com.harshit.imagesearch.R
+
+// TODO: Rename parameter arguments, choose names that matc
