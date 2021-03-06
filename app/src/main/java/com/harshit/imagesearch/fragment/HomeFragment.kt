@@ -25,4 +25,6 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     private var param2: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCr
+        super.onCreate(savedInstanceState)
+        arguments?.let {
+            param1 = it.getStr
