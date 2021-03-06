@@ -22,4 +22,7 @@ private const val ARG_PARAM2 = "param2"
 class HomeFragment : Fragment(R.layout.fragment_home) {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
-    private var
+    private var param2: String? = null
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCr
