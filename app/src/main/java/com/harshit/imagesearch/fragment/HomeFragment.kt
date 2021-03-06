@@ -32,4 +32,6 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         }
     }
 
-    p
+    private lateinit var btnGetStarted: Button
+    override fun onCreateView(
+        i
