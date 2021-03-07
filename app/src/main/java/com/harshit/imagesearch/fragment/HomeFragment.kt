@@ -36,3 +36,6 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
+    ): View? {
+        // Inflate the layout for this fragment
+        val view: V
