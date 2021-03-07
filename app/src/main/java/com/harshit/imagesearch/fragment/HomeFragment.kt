@@ -34,4 +34,5 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 
     private lateinit var btnGetStarted: Button
     override fun onCreateView(
-        i
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
