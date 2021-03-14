@@ -40,4 +40,5 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         // Inflate the layout for this fragment
         val view: View = inflater.inflate(R.layout.fragment_home, container, false)
 
-       
+        btnGetStarted = view.findViewById(R.id.btnGetStarted)
+        btnGetStarted.setOnClickList
