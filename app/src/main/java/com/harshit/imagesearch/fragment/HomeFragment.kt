@@ -42,4 +42,8 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 
         btnGetStarted = view.findViewById(R.id.btnGetStarted)
         btnGetStarted.setOnClickListener(View.OnClickListener {
-            val myIntent = Intent(activity, MainActivi
+            val myIntent = Intent(activity, MainActivity::class.java)
+            startActivity(myIntent)
+        })
+
+        return
