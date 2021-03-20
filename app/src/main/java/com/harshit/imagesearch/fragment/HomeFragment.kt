@@ -41,4 +41,5 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         val view: View = inflater.inflate(R.layout.fragment_home, container, false)
 
         btnGetStarted = view.findViewById(R.id.btnGetStarted)
-        btnGetStarted.setOnClickList
+        btnGetStarted.setOnClickListener(View.OnClickListener {
+            val myIntent = Intent(activity, MainActivi
