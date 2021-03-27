@@ -46,4 +46,10 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
             startActivity(myIntent)
         })
 
-        return
+        return view
+    }
+
+    companion object {
+
+        @JvmStatic
+        fun newInstance(param1: S
