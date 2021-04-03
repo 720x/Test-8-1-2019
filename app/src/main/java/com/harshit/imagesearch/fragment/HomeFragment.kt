@@ -52,4 +52,6 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     companion object {
 
         @JvmStatic
-        fun newInstance(param1: S
+        fun newInstance(param1: String, param2: String) =
+            HomeFragment().apply {
+                argu
