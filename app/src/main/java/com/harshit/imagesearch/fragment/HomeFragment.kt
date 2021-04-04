@@ -54,4 +54,5 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
             HomeFragment().apply {
-                argu
+                arguments = Bundle().apply {
+                    putString(ARG_PARAM1, para
