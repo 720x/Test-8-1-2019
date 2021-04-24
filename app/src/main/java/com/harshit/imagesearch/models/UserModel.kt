@@ -6,4 +6,10 @@ class UserModel {
     var email: String? = null
         private set
 
-    var n
+    var name: String? = null
+        private set
+
+
+    constructor() {}
+    constructor(
+        k
