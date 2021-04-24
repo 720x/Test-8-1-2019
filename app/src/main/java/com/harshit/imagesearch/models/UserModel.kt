@@ -12,4 +12,10 @@ class UserModel {
 
     constructor() {}
     constructor(
-        k
+        key: String,
+        email: String,
+        name: String,
+
+
+    ) {
+        setKey(key)
