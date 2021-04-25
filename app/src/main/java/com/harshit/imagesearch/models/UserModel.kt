@@ -19,3 +19,8 @@ class UserModel {
 
     ) {
         setKey(key)
+        setEmail(email)
+        setName(name)
+    }
+
+    fun setKey(key: String) 
