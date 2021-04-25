@@ -28,4 +28,5 @@ class UserModel {
         this.key = key
     }
 
- 
+    fun setEmail(email: String) {
+        require(!email.isEmpty()) { "Provided email is an em
