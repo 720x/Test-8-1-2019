@@ -23,4 +23,9 @@ class UserModel {
         setName(name)
     }
 
-    fun setKey(key: String) 
+    fun setKey(key: String) {
+        require(!key.isEmpty()) { "Provided key is an empty string." }
+        this.key = key
+    }
+
+ 
