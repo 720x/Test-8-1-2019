@@ -29,4 +29,9 @@ class UserModel {
     }
 
     fun setEmail(email: String) {
-        require(!email.isEmpty()) { "Provided email is an em
+        require(!email.isEmpty()) { "Provided email is an empty string." }
+        this.email = email
+    }
+
+    fun setName(name: String) {
+    
