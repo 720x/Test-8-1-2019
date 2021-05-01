@@ -34,4 +34,5 @@ class UserModel {
     }
 
     fun setName(name: String) {
-    
+        require(!name.isEmpty()) { "Provided name is an empty string." }
+        this.name = 
