@@ -58,3 +58,86 @@ class ImageClickableView : AppCompatImageView {
      * Draw white circle at the center of each detected object on the image
      */
     fun drawDetectionResults(results: List<DetectedObject>) {
+        (drawable as? BitmapDrawable)?.bitmap?.let { srcImage ->
+            // Get scale size based width/height
+            val scaleFactor =
+                max(srcImage.width / width.toFloat(), srcImage.height / height.toFloat())
+            // Calculate the total padding (based center inside scale type)
+            val diffWidth = abs(width - srcImage.width / scaleFactor) / 2
+            val diffHeight = abs(height - srcImage.height / scaleFactor) / 2
+
+            // Transform the original Bounding Box to actual bounding box based the display size of ImageView.
+            transformedResults = results.map { result ->
+                // Calculate to create new coordinates of Rectangle Box match on ImageView.
+                val actualRectBoundingBox = RectF(
+                    (result.boundingBox.left / scaleFactor) + diffWidth,
+                    (result.boundingBox.top / scaleFactor) + diffHeight,
+                    (result.boundingBox.right / scaleFactor) + diffWidth,
+                    (result.boundingBox.bottom / scaleFactor) + diffHeight
+                )
+                val dotCenter = PointF(
+                    (actualRectBoundingBox.right + actualRectBoundingBox.left) / 2,
+                    (actualRectBoundingBox.bottom + actualRectBoundingBox.top) / 2,
+                )
+                // Transform to new object to hold the data inside.
+                // This object is necessary to avoid performance
+                TransformedDetectionResult(actualRectBoundingBox, result.boundingBox, dotCenter)
+            }
+            Log.d(
+                TAG,
+                "srcImage: ${srcImage.width}/${srcImage.height} - imageView: ${width}/${height} => scaleFactor: $scaleFactor"
+            )
+            // Invalid to re-draw the canvas
+            // Method onDraw will be called with new data.
+            invalidate()
+        }
+    }
+
+    override fun onDraw(canvas: Canvas) {
+        super.onDraw(canvas)
+        // Getting detection results and draw the dot view onto detected object.
+        transformedResults.forEach { result ->
+            // Draw Dot View
+            canvas.drawCircle(result.dotCenter.x, result.dotCenter.y, CLICKABLE_RADIUS, dotPaint)
+        }
+    }
+
+    @SuppressLint("ClickableViewAccessibility")
+    override fun onTouchEvent(event: MotionEvent): Boolean {
+        when (event.action) {
+            MotionEvent.ACTION_DOWN -> {
+                val touchX = event.x
+                val touchY = event.y
+                val index =
+                    transformedResults.indexOfFirst {
+                        val dx = (touchX - it.dotCenter.x).toDouble().pow(2.0)
+                        val dy = (touchY - it.dotCenter.y).toDouble().pow(2.0)
+                        (dx + dy) < CLICKABLE_RADIUS.toDouble().pow(2.0)
+                    }
+                // If a matching object found, call the objectClickListener
+                if (index != -1) {
+                    cropBitMapBasedResult(transformedResults[index])?.let {
+                        onObjectClickListener?.invoke(it)
+                    }
+                }
+            }
+        }
+        return super.onTouchEvent(event)
+    }
+
+    /**
+     * This function will be used to crop the segment of Bitmap based touching by user.
+     */
+    private fun cropBitMapBasedResult(result: TransformedDetectionResult): Bitmap? {
+        // Crop image from Original Bitmap with Original Rect Bounding Box
+        (drawable as? BitmapDrawable)?.bitmap?.let {
+            return Bitmap.createBitmap(
+                it,
+                result.originalBoxRectF.left,
+                result.originalBoxRectF.top,
+                result.originalBoxRectF.width(),
+                result.originalBoxRectF.height()
+            )
+        }
+        return null
+    }
