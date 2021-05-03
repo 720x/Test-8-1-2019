@@ -141,3 +141,27 @@ class ImageClickableView : AppCompatImageView {
         }
         return null
     }
+
+    /**
+     * Return Dot Paint to draw circle
+     */
+    private fun createDotPaint() = Paint(Paint.ANTI_ALIAS_FLAG).apply {
+        color = Color.WHITE
+        style = Paint.Style.FILL
+        setShadowLayer(SHADOW_RADIUS, 0F, 0F, Color.BLACK)
+        // Force to use software to render by disable hardware acceleration.
+        // Important: the shadow will not work without this line.
+        setLayerType(LAYER_TYPE_SOFTWARE, this)
+    }
+}
+
+/**
+ * This class holds the transformed data
+ * @property: actualBoxRectF: The bounding box after calculated
+ * @property: originalBoxRectF: The original bounding box (Before transformed), use for crop bitmap.
+ */
+data class TransformedDetectionResult(
+    val actualBoxRectF: RectF,
+    val originalBoxRectF: Rect,
+    val dotCenter: PointF
+)
