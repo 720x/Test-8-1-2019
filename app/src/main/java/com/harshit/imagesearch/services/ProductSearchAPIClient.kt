@@ -11,4 +11,6 @@ import com.google.android.gms.tasks.Task
 import com.google.android.gms.tasks.TaskCompletionSource
 import com.google.android.gms.tasks.Tasks
 import com.google.gson.Gson
-import com.google.gson.Jso
+import com.google.gson.JsonSyntaxException
+import com.harshit.imagesearch.ProductSearchActivity
+import com.har
