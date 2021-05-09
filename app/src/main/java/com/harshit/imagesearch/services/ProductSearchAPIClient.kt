@@ -14,4 +14,12 @@ import com.google.gson.Gson
 import com.google.gson.JsonSyntaxException
 import com.harshit.imagesearch.ProductSearchActivity
 import com.harshit.imagesearch.ProductSearchResult
-import com.harshit.imagesearch.SearchResultRes
+import com.harshit.imagesearch.SearchResultResponse
+import org.json.JSONObject
+import java.io.ByteArrayOutputStream
+
+
+
+
+
+cl
