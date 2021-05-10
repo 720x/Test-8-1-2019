@@ -22,4 +22,7 @@ import java.io.ByteArrayOutputStream
 
 
 
-cl
+class ProductSearchAPIClient(context: Context){
+
+    companion object {
+        const val VISION
