@@ -27,4 +27,5 @@ class ProductSearchAPIClient(context: Context){
     companion object {
         const val VISION_API_PRODUCT_MAX_RESULT = 5
 
-        // Fill in the const below with your project 
+        // Fill in the const below with your project info.
+        const val VISION_API_URL = "https://vision.googleap
