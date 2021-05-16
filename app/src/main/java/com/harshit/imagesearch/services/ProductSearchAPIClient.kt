@@ -33,4 +33,8 @@ class ProductSearchAPIClient(context: Context){
         const val VISION_API_PROJECT_ID = "searchndtry"
         const val VISION_API_LOCATION_ID = "asia-east1"
         const val VISION_API_PRODUCT_SET_ID = "product_set0"
-        const val VISION_API_KEY = "AIzaSyA-OWenpxVC-YX6MC
+        const val VISION_API_KEY = "AIzaSyA-OWenpxVC-YX6MCwexLGLxotAkR6F9Zo"
+    }
+
+    // Instantiate the RequestQueue.
+    priva
