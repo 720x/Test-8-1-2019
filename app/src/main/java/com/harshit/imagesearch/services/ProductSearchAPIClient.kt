@@ -40,4 +40,6 @@ class ProductSearchAPIClient(context: Context){
     private val requestQueue = Volley.newRequestQueue(context)
 
     /**
-     * Convert an imag
+     * Convert an image to its Base64 representation
+     */
+    private fun convertBitmapToBase64(bitmap: Bitmap): String 
