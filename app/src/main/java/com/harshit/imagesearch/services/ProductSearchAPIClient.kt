@@ -37,4 +37,7 @@ class ProductSearchAPIClient(context: Context){
     }
 
     // Instantiate the RequestQueue.
-    priva
+    private val requestQueue = Volley.newRequestQueue(context)
+
+    /**
+     * Convert an imag
