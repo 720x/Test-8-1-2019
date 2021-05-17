@@ -42,4 +42,6 @@ class ProductSearchAPIClient(context: Context){
     /**
      * Convert an image to its Base64 representation
      */
-    private fun convertBitmapToBase64(bitmap: Bitmap): String 
+    private fun convertBitmapToBase64(bitmap: Bitmap): String {
+        val byteArrayOutputStream = ByteArrayOutputStream()
+        bitmap.c
