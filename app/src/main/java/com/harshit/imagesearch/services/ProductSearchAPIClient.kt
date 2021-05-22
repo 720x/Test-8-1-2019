@@ -45,4 +45,5 @@ class ProductSearchAPIClient(context: Context){
     private fun convertBitmapToBase64(bitmap: Bitmap): String {
         val byteArrayOutputStream = ByteArrayOutputStream()
         bitmap.compress(Bitmap.CompressFormat.PNG, 100, byteArrayOutputStream)
-        v
+        val byteArray: ByteArray = byteArrayOutputStream.toByteArray()
+        return Base64.enc
