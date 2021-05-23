@@ -50,4 +50,5 @@ class ProductSearchAPIClient(context: Context){
     }
 
     /**
-     * Use Product Search API
+     * Use Product Search API to search with the given query image
+     * Call the projects.locations.images
