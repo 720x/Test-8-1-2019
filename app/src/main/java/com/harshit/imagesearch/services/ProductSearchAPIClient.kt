@@ -46,4 +46,8 @@ class ProductSearchAPIClient(context: Context){
         val byteArrayOutputStream = ByteArrayOutputStream()
         bitmap.compress(Bitmap.CompressFormat.PNG, 100, byteArrayOutputStream)
         val byteArray: ByteArray = byteArrayOutputStream.toByteArray()
-        return Base64.enc
+        return Base64.encodeToString(byteArray, Base64.DEFAULT)
+    }
+
+    /**
+     * Use Product Search API
