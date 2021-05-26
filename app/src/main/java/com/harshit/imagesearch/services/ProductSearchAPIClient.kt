@@ -51,4 +51,6 @@ class ProductSearchAPIClient(context: Context){
 
     /**
      * Use Product Search API to search with the given query image
-     * Call the projects.locations.images
+     * Call the projects.locations.images.annotate endpoint.
+     */
+    fun annotateImage(image: Bitmap): Task<List<Product
