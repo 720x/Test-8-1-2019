@@ -55,4 +55,7 @@ class ProductSearchAPIClient(context: Context){
      */
     fun annotateImage(image: Bitmap): Task<List<ProductSearchResult>> {
         // Initialization to use the Task API
-        val apiS
+        val apiSource = TaskCompletionSource<List<ProductSearchResult>>()
+        val apiTask = apiSource.task
+
+       
