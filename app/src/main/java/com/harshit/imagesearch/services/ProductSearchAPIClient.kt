@@ -62,3 +62,8 @@ class ProductSearchAPIClient(context: Context){
         val base64: String = convertBitmapToBase64(image)
 
         // Craft the request body JSON.
+        val requestJson = """
+            {
+  "requests": [
+    {
+      "image"
