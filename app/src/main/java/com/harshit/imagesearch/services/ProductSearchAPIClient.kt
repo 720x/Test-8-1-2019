@@ -58,4 +58,4 @@ class ProductSearchAPIClient(context: Context){
         val apiSource = TaskCompletionSource<List<ProductSearchResult>>()
         val apiTask = apiSource.task
 
-       
+        // Convert the query image to its Base64 representation to call the Product Search API.
