@@ -66,4 +66,8 @@ class ProductSearchAPIClient(context: Context){
             {
   "requests": [
     {
-      "image"
+      "image": {
+        "content": "base64-encoded-image"
+      },
+      "features": [
+      
