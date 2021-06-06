@@ -70,4 +70,9 @@ class ProductSearchAPIClient(context: Context){
         "content": "base64-encoded-image"
       },
       "features": [
-      
+        {
+          "maxResults": 10,
+          "type": "WEB_DETECTION"
+        },
+      ]
+    }
