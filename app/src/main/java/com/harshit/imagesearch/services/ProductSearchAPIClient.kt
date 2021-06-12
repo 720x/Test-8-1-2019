@@ -82,4 +82,6 @@ class ProductSearchAPIClient(context: Context){
 
         // Add a new request to the queue
 
-     
+        requestQueue.add(object :
+            JsonObjectRequest(
+                Method.
