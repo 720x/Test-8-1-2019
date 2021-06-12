@@ -76,3 +76,10 @@ class ProductSearchAPIClient(context: Context){
         },
       ]
     }
+  ]
+}
+        """.trimIndent()
+
+        // Add a new request to the queue
+
+     
