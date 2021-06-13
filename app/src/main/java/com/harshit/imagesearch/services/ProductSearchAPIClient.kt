@@ -89,4 +89,6 @@ class ProductSearchAPIClient(context: Context){
                 JSONObject(requestJson),
                 { response ->
                     // Parse the API JSON response to a list of ProductSearchResult object.
-                    
+                    val productList = apiResponseToObject(response)
+
+                    // Loop
