@@ -88,4 +88,5 @@ class ProductSearchAPIClient(context: Context){
                 "POST https://vision.googleapis.com/v1/images:annotate",
                 JSONObject(requestJson),
                 { response ->
-                    /
+                    // Parse the API JSON response to a list of ProductSearchResult object.
+                    
