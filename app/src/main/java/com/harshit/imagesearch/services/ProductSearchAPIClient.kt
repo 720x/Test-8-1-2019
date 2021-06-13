@@ -86,4 +86,6 @@ class ProductSearchAPIClient(context: Context){
             JsonObjectRequest(
                 Method.POST,
                 "POST https://vision.googleapis.com/v1/images:annotate",
-    
+                JSONObject(requestJson),
+                { response ->
+                    /
