@@ -91,4 +91,5 @@ class ProductSearchAPIClient(context: Context){
                     // Parse the API JSON response to a list of ProductSearchResult object.
                     val productList = apiResponseToObject(response)
 
-                    // Loop
+                    // Loop through the product list and create tasks to load reference images.
+       
