@@ -92,4 +92,6 @@ class ProductSearchAPIClient(context: Context){
                     val productList = apiResponseToObject(response)
 
                     // Loop through the product list and create tasks to load reference images.
-                    // We will call the projects.locations.products.referenceImages.get endpo
+                    // We will call the projects.locations.products.referenceImages.get endpoint
+                    // for each product.
+                    val fetchReferenceImageTask
