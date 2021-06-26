@@ -96,4 +96,5 @@ class ProductSearchAPIClient(context: Context){
                     // for each product.
                     val fetchReferenceImageTasks = productList.map { fetchReferenceImage(it) }
 
-                    // When all referenc
+                    // When all reference image fetches have completed,
+                    // return the ProductSearchR
