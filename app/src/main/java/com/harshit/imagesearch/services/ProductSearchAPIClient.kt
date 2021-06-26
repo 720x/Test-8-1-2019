@@ -99,3 +99,4 @@ class ProductSearchAPIClient(context: Context){
                     // When all reference image fetches have completed,
                     // return the ProductSearchResult list
                     Tasks.whenAllComplete(fetchReferenceImageTasks)
+                        // Return the list of ProductSearchResult with product images'
