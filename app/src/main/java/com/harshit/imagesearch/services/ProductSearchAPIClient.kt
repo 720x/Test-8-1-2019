@@ -103,4 +103,6 @@ class ProductSearchAPIClient(context: Context){
                         .addOnSuccessListener { apiSource.setResult(productList) }
                         // An error occurred so returns it to the caller.
                         .addOnFailureListener { apiSource.setException(it) }
-           
+                },
+                // Return the error
+                { error -> apiSourc
