@@ -105,4 +105,6 @@ class ProductSearchAPIClient(context: Context){
                         .addOnFailureListener { apiSource.setException(it) }
                 },
                 // Return the error
-                { error -> apiSourc
+                { error -> apiSource.setException(error) }
+            ) {
+            override fun getBodyContentType()
