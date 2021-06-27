@@ -107,4 +107,9 @@ class ProductSearchAPIClient(context: Context){
                 // Return the error
                 { error -> apiSource.setException(error) }
             ) {
-            override fun getBodyContentType()
+            override fun getBodyContentType() = "application/json"
+        }.apply {
+            setShouldCache(false)
+        })
+
+       
