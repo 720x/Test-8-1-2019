@@ -100,4 +100,5 @@ class ProductSearchAPIClient(context: Context){
                     // return the ProductSearchResult list
                     Tasks.whenAllComplete(fetchReferenceImageTasks)
                         // Return the list of ProductSearchResult with product images' HTTP URLs.
-                        .addOnSuccessListener { apiSource.setResult(prod
+                        .addOnSuccessListener { apiSource.setResult(productList) }
+                        // An error occurred so returns it to the caller.
