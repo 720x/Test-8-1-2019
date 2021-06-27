@@ -102,3 +102,5 @@ class ProductSearchAPIClient(context: Context){
                         // Return the list of ProductSearchResult with product images' HTTP URLs.
                         .addOnSuccessListener { apiSource.setResult(productList) }
                         // An error occurred so returns it to the caller.
+                        .addOnFailureListener { apiSource.setException(it) }
+           
