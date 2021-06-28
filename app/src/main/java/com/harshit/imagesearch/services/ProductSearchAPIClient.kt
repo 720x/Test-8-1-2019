@@ -112,4 +112,9 @@ class ProductSearchAPIClient(context: Context){
             setShouldCache(false)
         })
 
-       
+        return apiTask
+    }
+
+    /**
+     * Fetch and transform product image
+     * Call the pr
