@@ -117,4 +117,6 @@ class ProductSearchAPIClient(context: Context){
 
     /**
      * Fetch and transform product image
-     * Call the pr
+     * Call the projects.locations.products.referenceImages.get endpoint
+     */
+    private 
