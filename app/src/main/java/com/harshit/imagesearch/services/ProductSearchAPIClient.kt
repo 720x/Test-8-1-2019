@@ -119,4 +119,4 @@ class ProductSearchAPIClient(context: Context){
      * Fetch and transform product image
      * Call the projects.locations.products.referenceImages.get endpoint
      */
-    private 
+    private fun fetchReferenceImage(searchResult: ProductSearchResult): Task<ProductSearchResult>
