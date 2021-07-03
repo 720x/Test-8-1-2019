@@ -121,4 +121,7 @@ class ProductSearchAPIClient(context: Context){
      */
     private fun fetchReferenceImage(searchResult: ProductSearchResult): Task<ProductSearchResult> {
         // Initialization to use the Task API
-        val apiSource = TaskCompleti
+        val apiSource = TaskCompletionSource<ProductSearchResult>()
+        val apiTask = apiSource.task
+
+        // Craft th
