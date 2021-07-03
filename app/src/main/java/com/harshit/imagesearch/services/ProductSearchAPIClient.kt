@@ -119,4 +119,6 @@ class ProductSearchAPIClient(context: Context){
      * Fetch and transform product image
      * Call the projects.locations.products.referenceImages.get endpoint
      */
-    private fun fetchReferenceImage(searchResult: ProductSearchResult): Task<ProductSearchResult>
+    private fun fetchReferenceImage(searchResult: ProductSearchResult): Task<ProductSearchResult> {
+        // Initialization to use the Task API
+        val apiSource = TaskCompleti
