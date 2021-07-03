@@ -125,4 +125,6 @@ class ProductSearchAPIClient(context: Context){
         val apiTask = apiSource.task
 
         // Craft the API request to get details about the reference image of the product
-        val stringRequest 
+        val stringRequest = object : StringRequest(
+            Method.GET,
+            "$VISION_
