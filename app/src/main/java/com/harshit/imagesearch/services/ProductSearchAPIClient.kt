@@ -124,4 +124,5 @@ class ProductSearchAPIClient(context: Context){
         val apiSource = TaskCompletionSource<ProductSearchResult>()
         val apiTask = apiSource.task
 
-        // Craft th
+        // Craft the API request to get details about the reference image of the product
+        val stringRequest 
