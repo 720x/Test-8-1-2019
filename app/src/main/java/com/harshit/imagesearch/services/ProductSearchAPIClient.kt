@@ -127,4 +127,6 @@ class ProductSearchAPIClient(context: Context){
         // Craft the API request to get details about the reference image of the product
         val stringRequest = object : StringRequest(
             Method.GET,
-            "$VISION_
+            "$VISION_API_URL/${searchResult.imageId}?key=$VISION_API_KEY",
+            { response ->
+ 
