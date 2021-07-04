@@ -129,4 +129,5 @@ class ProductSearchAPIClient(context: Context){
             Method.GET,
             "$VISION_API_URL/${searchResult.imageId}?key=$VISION_API_KEY",
             { response ->
- 
+                val responseJson = JSONObject(response)
+                val gcsUri 
