@@ -130,4 +130,6 @@ class ProductSearchAPIClient(context: Context){
             "$VISION_API_URL/${searchResult.imageId}?key=$VISION_API_KEY",
             { response ->
                 val responseJson = JSONObject(response)
-                val gcsUri 
+                val gcsUri = responseJson.getString("uri")
+
+                // Convert the GCS URL to i
