@@ -136,4 +136,6 @@ class ProductSearchAPIClient(context: Context){
                 val httpUri = gcsUri.replace("gs://", "https://storage.googleapis.com/")
 
                 // Save the HTTPS URL to the search result object
-     
+                searchResult.imageUri = httpUri
+
+                // Invoke the listener to continu
