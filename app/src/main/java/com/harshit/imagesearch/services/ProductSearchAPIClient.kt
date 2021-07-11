@@ -132,4 +132,5 @@ class ProductSearchAPIClient(context: Context){
                 val responseJson = JSONObject(response)
                 val gcsUri = responseJson.getString("uri")
 
-                // Convert the GCS URL to i
+                // Convert the GCS URL to its HTTPS representation
+                val httpUri = gcsUri.replace("gs://", "h
