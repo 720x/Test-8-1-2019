@@ -139,4 +139,6 @@ class ProductSearchAPIClient(context: Context){
                 searchResult.imageUri = httpUri
 
                 // Invoke the listener to continue with processing the API response (eg. show on UI)
-                apiSource.set
+                apiSource.setResult(searchResult)
+            },
+            { error -> apiSource.setExce
