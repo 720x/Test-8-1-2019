@@ -138,4 +138,5 @@ class ProductSearchAPIClient(context: Context){
                 // Save the HTTPS URL to the search result object
                 searchResult.imageUri = httpUri
 
-                // Invoke the listener to continu
+                // Invoke the listener to continue with processing the API response (eg. show on UI)
+                apiSource.set
