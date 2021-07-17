@@ -147,4 +147,7 @@ class ProductSearchAPIClient(context: Context){
             override fun getBodyContentType(): String {
                 return "application/json; charset=utf-8"
             }
- 
+        }
+        Log.d(ProductSearchActivity.TAG, "Sending API request.")
+
+        // Add the requ
