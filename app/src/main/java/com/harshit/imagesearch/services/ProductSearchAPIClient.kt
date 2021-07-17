@@ -141,4 +141,8 @@ class ProductSearchAPIClient(context: Context){
                 // Invoke the listener to continue with processing the API response (eg. show on UI)
                 apiSource.setResult(searchResult)
             },
-            { error -> apiSource.setExce
+            { error -> apiSource.setException(error) }
+        ) {
+
+            override fun getBodyContentType(): String {
+ 
