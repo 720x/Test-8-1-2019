@@ -150,4 +150,10 @@ class ProductSearchAPIClient(context: Context){
         }
         Log.d(ProductSearchActivity.TAG, "Sending API request.")
 
-        // Add the requ
+        // Add the request to the RequestQueue.
+        requestQueue.add(stringRequest)
+
+        return apiTask
+    }
+
+  
