@@ -157,4 +157,7 @@ class ProductSearchAPIClient(context: Context){
     }
 
     /**
-     * Convert the JSON API response to a list of ProductSearchResult o
+     * Convert the JSON API response to a list of ProductSearchResult objects
+     */
+    @Throws(JsonSyntaxException::class)
+    private fun apiResponseToObjec
