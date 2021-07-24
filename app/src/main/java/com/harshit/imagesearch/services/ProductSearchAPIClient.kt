@@ -156,4 +156,5 @@ class ProductSearchAPIClient(context: Context){
         return apiTask
     }
 
-  
+    /**
+     * Convert the JSON API response to a list of ProductSearchResult o
