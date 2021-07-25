@@ -162,4 +162,7 @@ class ProductSearchAPIClient(context: Context){
     @Throws(JsonSyntaxException::class)
     private fun apiResponseToObject(response: JSONObject): List<ProductSearchResult> {
         // Parse response JSON string into objects.
-        val productSearchResults = mutableListOf<ProductSearchRe
+        val productSearchResults = mutableListOf<ProductSearchResult>()
+
+        val searchResult =
+            Gson().fromJson(response.toString(), Searc
