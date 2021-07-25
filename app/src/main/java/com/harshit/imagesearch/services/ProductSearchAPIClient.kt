@@ -165,4 +165,5 @@ class ProductSearchAPIClient(context: Context){
         val productSearchResults = mutableListOf<ProductSearchResult>()
 
         val searchResult =
-            Gson().fromJson(response.toString(), Searc
+            Gson().fromJson(response.toString(), SearchResultResponse::class.java)
+        Log.d(ProductSearchActivity.TAG, "res
