@@ -161,4 +161,5 @@ class ProductSearchAPIClient(context: Context){
      */
     @Throws(JsonSyntaxException::class)
     private fun apiResponseToObject(response: JSONObject): List<ProductSearchResult> {
-        // Parse response
+        // Parse response JSON string into objects.
+        val productSearchResults = mutableListOf<ProductSearchRe
