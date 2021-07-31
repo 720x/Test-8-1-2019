@@ -167,4 +167,6 @@ class ProductSearchAPIClient(context: Context){
         val searchResult =
             Gson().fromJson(response.toString(), SearchResultResponse::class.java)
         Log.d(ProductSearchActivity.TAG, "results: $searchResult")
-        searchResult.responses?.get(0)?.productSearchResults?
+        searchResult.responses?.get(0)?.productSearchResults?.results?.forEach { result ->
+            productSearchResults.add(
+                Pr
