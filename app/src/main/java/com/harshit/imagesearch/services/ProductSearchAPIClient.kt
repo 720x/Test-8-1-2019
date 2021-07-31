@@ -169,4 +169,6 @@ class ProductSearchAPIClient(context: Context){
         Log.d(ProductSearchActivity.TAG, "results: $searchResult")
         searchResult.responses?.get(0)?.productSearchResults?.results?.forEach { result ->
             productSearchResults.add(
-                Pr
+                ProductSearchResult(
+                    result.image,
+                    result.scor
