@@ -171,4 +171,5 @@ class ProductSearchAPIClient(context: Context){
             productSearchResults.add(
                 ProductSearchResult(
                     result.image,
-                    result.scor
+                    result.score,
+                    result.product.productLabels.joinToString { "${it.key} - ${it.va
