@@ -175,4 +175,9 @@ class ProductSearchAPIClient(context: Context){
                     result.product.productLabels.joinToString { "${it.key} - ${it.value}" },
                     result.product.name
                 )
-           
+            )
+        }
+
+        return productSearchResults
+    }
+}
