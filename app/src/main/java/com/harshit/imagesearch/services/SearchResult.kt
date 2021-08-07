@@ -11,4 +11,6 @@ data class Response(
 )
 
 data class ProductSearchResults(
-    val indexTime: 
+    val indexTime: String,
+    val results: List<Result>,
+    val productGroupedResults: Li
