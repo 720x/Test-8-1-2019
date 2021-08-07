@@ -13,4 +13,8 @@ data class Response(
 data class ProductSearchResults(
     val indexTime: String,
     val results: List<Result>,
-    val productGroupedResults: Li
+    val productGroupedResults: List<ProductGroupedResult>
+)
+
+data class ProductGroupedResult(
+    val boundingP
