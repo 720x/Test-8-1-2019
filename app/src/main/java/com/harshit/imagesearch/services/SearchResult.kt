@@ -7,4 +7,8 @@ package com.harshit.imagesearch
 data class SearchResultResponse(val responses: List<Response>?)
 
 data class Response(
-    val produ
+    val productSearchResults: ProductSearchResults?
+)
+
+data class ProductSearchResults(
+    val indexTime: 
