@@ -27,3 +27,10 @@ data class BoundingPoly(
 
 data class NormalizedVertex(
     val x: Double,
+    val y: Double
+)
+
+data class Result(
+    val product: Product,
+    val score: Double,
+    val 
