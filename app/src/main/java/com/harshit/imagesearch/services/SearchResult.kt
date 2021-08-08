@@ -17,4 +17,9 @@ data class ProductSearchResults(
 )
 
 data class ProductGroupedResult(
-    val boundingP
+    val boundingPoly: BoundingPoly,
+    val results: List<Result>
+)
+
+data class BoundingPoly(
+    val 
