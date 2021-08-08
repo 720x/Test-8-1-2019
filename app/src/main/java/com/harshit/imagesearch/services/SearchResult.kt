@@ -33,4 +33,9 @@ data class NormalizedVertex(
 data class Result(
     val product: Product,
     val score: Double,
-    val 
+    val image: String
+)
+
+data class Product(
+    val name: String,
+    val displayName: Stri
