@@ -22,4 +22,8 @@ data class ProductGroupedResult(
 )
 
 data class BoundingPoly(
-    val 
+    val normalizedVertices: List<NormalizedVertex>
+)
+
+data class NormalizedVertex(
+    val x: Double,
