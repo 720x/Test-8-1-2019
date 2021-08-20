@@ -42,3 +42,12 @@ data class Product(
     val productCategory: String,
     val productLabels: List<ProductLabel>
 )
+
+data class ProductLabel(
+    val key: String,
+    val value: String
+)
+
+
+/**
+ * Transf
