@@ -38,4 +38,7 @@ data class Result(
 
 data class Product(
     val name: String,
-    val displayName: Stri
+    val displayName: String,
+    val productCategory: String,
+    val productLabels: List<ProductLabel>
+)
