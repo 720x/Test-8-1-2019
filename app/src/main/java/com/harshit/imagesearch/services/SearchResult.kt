@@ -50,4 +50,7 @@ data class ProductLabel(
 
 
 /**
- * Transf
+ * Transformed product search result.
+ */
+data class ProductSearchResult(
+    val imageI
