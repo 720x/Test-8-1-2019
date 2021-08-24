@@ -53,4 +53,8 @@ data class ProductLabel(
  * Transformed product search result.
  */
 data class ProductSearchResult(
-    val imageI
+    val imageId: String,
+    val score: Double,
+    val label: String,
+    val name: String,
+    var im
