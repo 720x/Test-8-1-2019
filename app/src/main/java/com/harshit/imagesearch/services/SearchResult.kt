@@ -57,4 +57,5 @@ data class ProductSearchResult(
     val score: Double,
     val label: String,
     val name: String,
-    var im
+    var imageUri: String? = null
+)
