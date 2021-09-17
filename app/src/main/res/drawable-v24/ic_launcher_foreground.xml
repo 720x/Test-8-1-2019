@@ -11,4 +11,6 @@
                 android:endY="92.4963"
                 android:startX="42.9492"
                 android:startY="49.59793"
-                a
+                android:type="linear">
+                <item
+                    android:color="#4
