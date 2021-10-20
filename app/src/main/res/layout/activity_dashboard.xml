@@ -4,4 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
-    androi
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:con
