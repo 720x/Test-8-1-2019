@@ -24,4 +24,8 @@
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
 
 
-        </androidx.appcompat.widget.Toolbar
+        </androidx.appcompat.widget.Toolbar>
+
+        <FrameLayout
+            android:id="@+id/fragment_container"
+     
