@@ -36,4 +36,6 @@
     </LinearLayout>
 
     <com.google.android.material.navigation.NavigationView
-        android:id="@+i
+        android:id="@+id/navigationView"
+        android:layout_width="wrap_content"
+        andr
