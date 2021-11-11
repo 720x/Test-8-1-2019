@@ -33,4 +33,7 @@
             android:background="#F6EEE7" />
 
 
-    </LinearL
+    </LinearLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+i
