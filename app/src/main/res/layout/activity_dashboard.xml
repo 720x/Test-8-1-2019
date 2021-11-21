@@ -44,4 +44,7 @@
         app:headerLayout="@layout/nav_header"
         app:itemIconTint="@color/primary"
         app:itemTextColor="@color/primary"
-      
+        app:menu="@menu/drawer_menu" />
+
+
+</androidx.drawerlayout.widget.DrawerLayout>
