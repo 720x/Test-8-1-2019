@@ -8,4 +8,6 @@
     tools:context=".activity.LoginActivity">
 
     <TextView
-       
+        android:id="@+id/txtLogin"
+        android:layout_width="wrap_content"
+        andr
