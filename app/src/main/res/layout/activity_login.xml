@@ -16,4 +16,6 @@
         android:text="Login"
         android:textColor="@color/white"
         android:textSize="48sp"
-        app:layout_constraintLeft_toLe
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        
