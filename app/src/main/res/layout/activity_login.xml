@@ -21,4 +21,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+i
+        android:id="@+id/etLoginEmail"
+        android:layout_width="match_parent"
+        android:layou
