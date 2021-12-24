@@ -25,4 +25,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
-        android:l
+        android:layout_marginRight="10dp"
+        android:backgroundTint="#8045230F"
+
+        andr
