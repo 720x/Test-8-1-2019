@@ -35,4 +35,5 @@
         android:textColorLink="@color/primary"
 
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_const
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tx
