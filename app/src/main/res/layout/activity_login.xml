@@ -40,4 +40,5 @@
 
     <EditText
         android:id="@+id/etLoginPassword"
-        an
+        android:layout_width="match_parent"
+        android:layout_height="wrap_con
