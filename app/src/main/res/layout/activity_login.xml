@@ -50,4 +50,5 @@
         android:inputType="textPassword"
         android:maxLines="1"
         android:paddingBottom="16dp"
-        app:
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="paren
