@@ -48,4 +48,6 @@
         android:backgroundTint="#8045230F"
         android:hint="Password..."
         android:inputType="textPassword"
-  
+        android:maxLines="1"
+        android:paddingBottom="16dp"
+        app:
