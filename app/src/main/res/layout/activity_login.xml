@@ -62,4 +62,7 @@
         android:backgroundTint="@color/primary"
         android:padding="4dp"
         android:text="LOGIN"
-        app:layout_constraintRight_toRightOf="paren
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etLoginPassword" />
+
+ 
