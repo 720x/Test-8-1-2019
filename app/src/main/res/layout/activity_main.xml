@@ -7,4 +7,8 @@
     android:background="@color/black"
     tools:context=".activity.MainActivity">
 
-    <com.
+    <com.harshit.imagesearch.ImageClickableView
+        android:id="@+id/imgImage"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+    
