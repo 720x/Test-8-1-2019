@@ -16,4 +16,6 @@
         android:focusableInTouchMode="true"
         android:padding="16dp"
         android:scaleType="fitCenter"
-        app:layout_constraintBottom_toTopOf="@+id/btnUserButt
+        app:layout_constraintBottom_toTopOf="@+id/btnUserButtons"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constrain
