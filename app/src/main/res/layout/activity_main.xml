@@ -27,4 +27,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/camera_icon"
-        app:layout_constraintBottom_toTopOf="@+id/txtD
+        app:layout_constraintBottom_toTopOf="@+id/txtDisplay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizo
