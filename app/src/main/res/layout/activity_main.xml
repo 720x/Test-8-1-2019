@@ -33,4 +33,6 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-   
+        android:id="@+id/txtDisplay"
+        android:layout_width="wrap_content"
+        android:layo
