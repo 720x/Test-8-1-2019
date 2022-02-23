@@ -35,4 +35,6 @@
     <TextView
         android:id="@+id/txtDisplay"
         android:layout_width="wrap_content"
-        android:layo
+        android:layout_height="wrap_content"
+        android:text="Please choose an image.."
+        a
