@@ -39,4 +39,5 @@
         android:text="Please choose an image.."
         android:textColor="@color/white"
         android:textSize="26sp"
-        app:layout
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="par
