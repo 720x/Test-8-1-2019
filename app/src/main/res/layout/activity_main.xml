@@ -59,4 +59,7 @@
             android:id="@+id/btnUserGallery"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:backgroun
+            android:backgroundTint="@color/white"
+            android:padding="16dp"
+            android:text="Gallery"
+  
