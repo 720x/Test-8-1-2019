@@ -56,3 +56,5 @@
         app:layout_constraintRight_toRightOf="parent">
 
         <Button
+            android:id="@+id/btnUserGallery"
+            android:layout_w
