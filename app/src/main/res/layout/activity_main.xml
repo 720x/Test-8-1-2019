@@ -62,4 +62,5 @@
             android:backgroundTint="@color/white"
             android:padding="16dp"
             android:text="Gallery"
-  
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toB
