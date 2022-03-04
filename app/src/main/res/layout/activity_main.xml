@@ -63,4 +63,6 @@
             android:padding="16dp"
             android:text="Gallery"
             android:textColor="@color/black"
-            app:layout_constraintBottom_toB
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+          
