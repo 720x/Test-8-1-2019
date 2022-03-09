@@ -68,4 +68,5 @@
             app:layout_constraintRight_toLeftOf="@+id/btnUserCamera" />
 
         <Button
-         
+            android:id="@+id/btnUserCamera"
+            android:layout_width="
