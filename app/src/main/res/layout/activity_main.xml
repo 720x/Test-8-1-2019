@@ -71,4 +71,7 @@
             android:id="@+id/btnUserCamera"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:backgroundTint
+            android:backgroundTint="@color/white"
+            android:padding="16dp"
+            android:text="Camera"
+     
