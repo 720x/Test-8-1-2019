@@ -76,4 +76,7 @@
             android:text="Camera"
             android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toRightOf="@+id/btnUserG
+            app:layout_constraintLeft_toRightOf="@+id/btnUserGallery"
+            app:layout_constraintRight_toRightOf="parent" />
+
+ 
