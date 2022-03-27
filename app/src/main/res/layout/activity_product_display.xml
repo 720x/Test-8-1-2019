@@ -4,4 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingTop="@dimen/product_search_container_paddi
+    android:paddingTop="@dimen/product_search_container_padding"
+    android:paddingBottom="@dimen/product_search_container_padding"
+    tools:context=".ac
