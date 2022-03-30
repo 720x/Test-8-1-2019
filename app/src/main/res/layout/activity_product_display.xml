@@ -6,4 +6,8 @@
     android:layout_height="match_parent"
     android:paddingTop="@dimen/product_search_container_padding"
     android:paddingBottom="@dimen/product_search_container_padding"
-    tools:context=".ac
+    tools:context=".activity.ProductDisplayActivity">
+
+    <ImageView
+        android:id="@+id/iv_query_image"
+        and
