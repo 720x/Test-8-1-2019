@@ -11,4 +11,7 @@
     <ImageView
         android:id="@+id/iv_query_image"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/product_sear
+        android:layout_height="@dimen/product_search_image_height"
+        android:contentDescription="@null"
+
+        app:layou
