@@ -22,4 +22,6 @@
         android:id="@+id/txtSuggestions"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="
+        android:layout_marginTop="@dimen/product_search_container_padding"
+        android:text="Product Suggestions"
+   
