@@ -31,4 +31,6 @@
     <ProgressBar
         android:id="@+id/progressBar"
         android:layout_width="@dimen/product_search_progress_size"
-        android:layout_height="@dimen/product_sear
+        android:layout_height="@dimen/product_search_progress_size"
+        android:visibility="gone"
+        app:layout_constraintBottom_t
