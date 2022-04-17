@@ -34,4 +34,6 @@
         android:layout_height="@dimen/product_search_progress_size"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="@+id/txtSuggestions"
-        app:layout_constraintEnd_toStartOf="@+id/txtSu
+        app:layout_constraintEnd_toStartOf="@+id/txtSuggestions"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layo
