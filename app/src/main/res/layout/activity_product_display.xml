@@ -40,4 +40,6 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvProductMain"
-        android:layout_width="0d
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/product_se
