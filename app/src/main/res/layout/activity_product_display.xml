@@ -36,4 +36,6 @@
         app:layout_constraintBottom_toBottomOf="@+id/txtSuggestions"
         app:layout_constraintEnd_toStartOf="@+id/txtSuggestions"
         app:layout_constraintStart_toStartOf="parent"
-        app:layo
+        app:layout_constraintTop_toTopOf="@+id/txtSuggestions" />
+
+    <androidx.recyclerview.widget.Recycler
