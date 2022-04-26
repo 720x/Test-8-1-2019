@@ -44,4 +44,5 @@
         android:layout_height="0dp"
         android:layout_marginTop="@dimen/product_search_container_padding"
         app:layout_constraintBottom_toTopOf="@id/appBar"
-      
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toS
