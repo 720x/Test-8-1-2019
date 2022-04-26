@@ -42,4 +42,6 @@
         android:id="@+id/rvProductMain"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="@dimen/product_se
+        android:layout_marginTop="@dimen/product_search_container_padding"
+        app:layout_constraintBottom_toTopOf="@id/appBar"
+      
