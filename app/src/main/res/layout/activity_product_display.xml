@@ -55,4 +55,7 @@
         android:background="@color/primary"
         app:layout_constraintBottom_toBottomOf="parent">
 
-        <TextVie
+        <TextView
+            android:id="@+id/txtProceedToTry"
+            android:layout_width="40dp"
+  
