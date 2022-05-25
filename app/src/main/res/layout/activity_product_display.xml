@@ -62,4 +62,6 @@
             android:layout_marginTop="15dp"
             android:layout_marginRight="20dp"
             android:background="@drawable/ic_baseline_arrow_forward_24"
-            android:textColor="@co
+            android:textColor="@color/black"
+            app:layout_constraintRight_toRightOf="parent"
+            app:lay
