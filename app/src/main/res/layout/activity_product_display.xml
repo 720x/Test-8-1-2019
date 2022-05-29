@@ -71,4 +71,6 @@
             android:layout_height="wrap_content"
             android:text="Proceed to Try"
             android:textColor="@color/black"
-            android:tex
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+        
