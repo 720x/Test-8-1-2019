@@ -7,4 +7,6 @@
     tools:context=".activity.TryOnActivity">
 
 
-   
+    <ImageView
+        android:id="@+id/imgUser"
+        android:layout_width="mat
