@@ -20,4 +20,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
-    <ImageV
+    <ImageView
+        android:id="@+id/tryOnImage"
+        android:layout_width="match_parent"
