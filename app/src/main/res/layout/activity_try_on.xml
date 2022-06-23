@@ -27,4 +27,5 @@
         android:src="@drawable/cloth_demo"
 
 
-        a
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd
