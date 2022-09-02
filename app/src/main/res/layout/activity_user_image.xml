@@ -14,4 +14,6 @@
         android:layout_marginTop="100dp"
         android:contentDescription="@null"
         android:focusableInTouchMode="true"
-        android:padding="
+        android:padding="16dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom
