@@ -17,4 +17,6 @@
         android:padding="16dp"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toTopOf="@+id/btnUserButtons"
-        app:layout_constraintLeft_toLeftOf="par
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraint
