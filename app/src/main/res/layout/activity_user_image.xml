@@ -19,4 +19,8 @@
         app:layout_constraintBottom_toTopOf="@+id/btnUserButtons"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraint
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgUserDisplay"
+    
