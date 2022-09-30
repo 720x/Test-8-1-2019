@@ -28,4 +28,5 @@
         android:src="@drawable/camera_icon"
         app:layout_constraintBottom_toTopOf="@+id/txtUserDisplay"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" /
