@@ -33,4 +33,6 @@
 
     <TextView
         android:id="@+id/txtUserDisplay"
-        android:layout_width="wr
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        andro
