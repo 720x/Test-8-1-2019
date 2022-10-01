@@ -35,4 +35,6 @@
         android:id="@+id/txtUserDisplay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        andro
+        android:text="Insert user pic.."
+        android:textSize="26sp"
+        app:layout_constra
