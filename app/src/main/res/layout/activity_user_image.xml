@@ -45,4 +45,5 @@
 
     <ImageView
         android:id="@+id/imgPassProduct"
-     
+        android:layout_width="200dp"
+        android:layout_height="200dp"
