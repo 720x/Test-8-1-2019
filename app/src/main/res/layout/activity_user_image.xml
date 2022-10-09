@@ -48,4 +48,8 @@
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:src="@drawable/cloth_demo"
-        android:visibility="invisib
+        android:visibility="invisible"
+
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toSta
