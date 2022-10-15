@@ -66,4 +66,6 @@
 
         <Button
             android:id="@+id/btnUserGallery"
-            a
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+ 
