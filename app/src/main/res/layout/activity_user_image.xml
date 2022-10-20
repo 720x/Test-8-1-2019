@@ -82,3 +82,5 @@
             android:layout_height="wrap_content"
             android:backgroundTint="@color/white"
             android:padding="16dp"
+            android:text="Camera"
+            android:textColor="@color/blac
