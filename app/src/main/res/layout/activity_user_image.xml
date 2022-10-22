@@ -83,4 +83,6 @@
             android:backgroundTint="@color/white"
             android:padding="16dp"
             android:text="Camera"
-            android:textColor="@color/blac
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_
