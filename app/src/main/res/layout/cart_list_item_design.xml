@@ -10,4 +10,8 @@
         android:layout_height="280dp"
         android:src="@drawable/cloth_demo"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnTryOn"
+        android:
