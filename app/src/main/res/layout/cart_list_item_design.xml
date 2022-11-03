@@ -9,4 +9,5 @@
         android:layout_width="204dp"
         android:layout_height="280dp"
         android:src="@drawable/cloth_demo"
-        ap
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf
