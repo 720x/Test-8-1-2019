@@ -18,4 +18,6 @@
         android:layout_height="wrap_content"
         android:backgroundTint="@color/white"
         android:text="TryOn"
-     
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/btnRemove"
+      
