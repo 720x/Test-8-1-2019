@@ -31,4 +31,5 @@
         android:layout_height="wrap_content"
         android:backgroundTint="@color/white"
         android:text="Remove"
-        an
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBott
