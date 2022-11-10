@@ -32,4 +32,6 @@
         android:backgroundTint="@color/white"
         android:text="Remove"
         android:textColor="@color/black"
-        app:layout_constraintBottom_toBott
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_cons
