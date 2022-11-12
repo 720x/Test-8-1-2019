@@ -31,3 +31,26 @@
         app:layout_constraintTop_toBottomOf="@id/txtQ1" />
 
     <TextView
+        android:id="@+id/txtQ2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:text="Q2. How to install SearchNDTry mobile app?"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtAns1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text=".apk files are Android apps. After downloading the apk file (how to find a good version), you need to install it. Using a file manager/explorer app, click on the .apk and follow the instructions. If you need help, see the how to install an apk file guide."
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtQ2" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
