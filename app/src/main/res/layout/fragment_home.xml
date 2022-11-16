@@ -14,4 +14,7 @@
         android:layout_marginLeft="30dp"
         android:layout_marginTop="280dp"
         android:text="Welcome to"
-        android:textColor="@color
+        android:textColor="@color/white"
+        android:textSize="50dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+    
