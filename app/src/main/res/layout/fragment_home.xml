@@ -36,4 +36,6 @@
         android:layout_margin="40dp"
         android:text="Get Started"
         android:backgroundTint="@color/white"
-        android:textColor="@co
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        a
