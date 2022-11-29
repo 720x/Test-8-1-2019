@@ -4,4 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="@dimen/item_product_height"
-    android:padding="@dimen/item_pro
+    android:padding="@dimen/item_product_padding">
+
+    <ImageView
+        android:id="@+id/ivProduct"
+        android:
