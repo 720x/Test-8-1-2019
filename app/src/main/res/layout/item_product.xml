@@ -8,4 +8,5 @@
 
     <ImageView
         android:id="@+id/ivProduct"
-        android:
+        android:layout_width="@dimen/image_product_size"
+        android:layout_height="@
