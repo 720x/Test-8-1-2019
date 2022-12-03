@@ -11,4 +11,6 @@
         android:layout_width="@dimen/image_product_size"
         android:layout_height="@dimen/image_product_size"
         android:contentDescription="@null"
-        android:scaleType
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:l
