@@ -27,4 +27,5 @@
 
         <TextView
             android:id="@+id/tvProductName"
-        
+            android:layout_width="match_parent"
+            android:layout_
