@@ -31,3 +31,7 @@
             android:layout_height="wrap_content"
             android:textStyle="bold"
             tools:text="Product Id" />
+
+        <TextView
+            android:id="@+id/tvProductScore"
+       
