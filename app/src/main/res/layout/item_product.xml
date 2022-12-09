@@ -28,4 +28,6 @@
         <TextView
             android:id="@+id/tvProductName"
             android:layout_width="match_parent"
-            android:layout_
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            tools:text="Product Id" />
