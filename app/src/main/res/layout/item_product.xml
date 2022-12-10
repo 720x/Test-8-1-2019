@@ -38,4 +38,6 @@
             android:layout_height="wrap_content"
             tools:text="Product Name" />
 
-        <TextVi
+        <TextView
+            android:id="@+id/tvProductLabel"
+            android:layout_width="match_pare
