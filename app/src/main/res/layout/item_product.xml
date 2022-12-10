@@ -35,4 +35,7 @@
         <TextView
             android:id="@+id/tvProductScore"
             android:layout_width="match_parent"
-            android:layout_
+            android:layout_height="wrap_content"
+            tools:text="Product Name" />
+
+        <TextVi
