@@ -42,4 +42,8 @@
             android:id="@+id/tvProductLabel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:text="Prod
+            tools:text="Product Score" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.Constr
