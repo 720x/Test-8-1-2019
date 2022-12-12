@@ -7,4 +7,9 @@
     android:gravity="bottom"
     android:orientation="vertical"
     android:padding="16dp"
-    android:theme="@style/ThemeOverl
+    android:theme="@style/ThemeOverlay.AppCompat.Light">
+
+
+    <TextView
+        android:id="@+id/navUserName"
+        and
