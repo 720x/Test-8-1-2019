@@ -19,4 +19,6 @@
         android:ellipsize="end"
         android:maxLines="1"
         android:paddingTop="8dp"
-        android:text="Se
+        android:text="SearchNDTry"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        andr
