@@ -21,4 +21,8 @@
         android:paddingTop="8dp"
         android:text="SearchNDTry"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        andr
+        android:textColor="@color/white"
+        android:textSize="28sp" />
+
+
+</LinearLayout>
