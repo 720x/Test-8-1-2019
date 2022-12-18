@@ -10,4 +10,6 @@
         android:layout_height="296dp"
         android:layout_marginTop="4dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/cloth_demo
+        android:src="@drawable/cloth_demo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constrain
