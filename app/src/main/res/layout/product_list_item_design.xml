@@ -20,4 +20,6 @@
         android:layout_height="wrap_content"
         android:text="Add to Cart"
         android:textColor="@color/white"
-        android:backgroundTint="@col
+        android:backgroundTint="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layou
