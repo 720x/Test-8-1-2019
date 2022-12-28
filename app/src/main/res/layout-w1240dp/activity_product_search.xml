@@ -5,4 +5,8 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     android:paddingTop="@dimen/product_search_container_padding"
-    android:paddingBottom="@dimen/product_search_container_pa
+    android:paddingBottom="@dimen/product_search_container_padding"
+    tools:ignore="MissingDefaultResource">
+
+    <ImageView
+        an
