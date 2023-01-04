@@ -21,4 +21,6 @@
         android:id="@+id/btnSearch2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/pro
+        android:layout_marginTop="@dimen/product_search_container_padding"
+        android:text="Search"
+        app:l
