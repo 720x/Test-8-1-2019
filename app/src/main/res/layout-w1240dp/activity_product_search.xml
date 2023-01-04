@@ -23,4 +23,5 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/product_search_container_padding"
         android:text="Search"
-        app:l
+        app:layout_constraintEnd_toEndOf="@+id/iv_query_image2"
+        app:layout_constraintSt
