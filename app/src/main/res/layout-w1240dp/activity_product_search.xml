@@ -24,4 +24,5 @@
         android:layout_marginTop="@dimen/product_search_container_padding"
         android:text="Search"
         app:layout_constraintEnd_toEndOf="@+id/iv_query_image2"
-        app:layout_constraintSt
+        app:layout_constraintStart_toStartOf="@+id/iv_query_image2"
+        app:layout_constraintTop_toBott
