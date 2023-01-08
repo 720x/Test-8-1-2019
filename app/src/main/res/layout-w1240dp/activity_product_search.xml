@@ -25,4 +25,8 @@
         android:text="Search"
         app:layout_constraintEnd_toEndOf="@+id/iv_query_image2"
         app:layout_constraintStart_toStartOf="@+id/iv_query_image2"
-        app:layout_constraintTop_toBott
+        app:layout_constraintTop_toBottomOf="@id/iv_query_image2" />
+
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        andro
