@@ -33,4 +33,5 @@
         android:layout_height="@dimen/product_search_progress_size"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="@+id/btnSearch2"
-        app:layout_constraintEnd_t
+        app:layout_constraintEnd_toStartOf="@+id/btnSearch2"
+        app:layout_constraintStart_to
