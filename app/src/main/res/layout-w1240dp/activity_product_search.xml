@@ -41,4 +41,5 @@
         android:id="@+id/rvProductMain2"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android
+        android:layout_marginTop="@dimen/product_search_container_padding"
+        app:layout_constraintBotto
