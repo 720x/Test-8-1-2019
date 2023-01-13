@@ -39,4 +39,6 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvProductMain2"
-        andro
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android
