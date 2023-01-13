@@ -37,4 +37,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/btnSearch2" />
 
-  
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvProductMain2"
+        andro
