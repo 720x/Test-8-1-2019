@@ -14,4 +14,8 @@
             android:title="FAQs " />
 
 
-    
+    </group>
+
+    <item
+        android:id="@+id/nav_logout"
+        android:icon="
