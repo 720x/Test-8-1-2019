@@ -1,0 +1,5 @@
+
+<resources>
+    <string name="app_name">Image Search</string>
+    <string name="title_activity_product_display">ProductDisplay</string>
+    <string name="prompt_email">Email</string>
