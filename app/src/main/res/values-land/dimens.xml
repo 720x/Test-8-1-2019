@@ -1,2 +1,3 @@
 <resources>
- <dimen name="activity_ho
+ <dimen name="activity_horizontal_margin">48dp</dimen>
+</resources>
