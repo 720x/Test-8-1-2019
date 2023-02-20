@@ -3,4 +3,5 @@
     <style name="Theme.ImageSearch" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/light</item>
-        <ite
+        <item name="colorPrimaryVariant">@color/dark</item>
+        <item name="colorOnPrim
